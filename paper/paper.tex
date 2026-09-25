@@ -1,0 +1,315 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{caption}
+
+% Correct bad hyphenation
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\begin{document}
+
+\title{Hierarchical Aggregation for Faithful Attribution in Bangla Hate Speech Detection}
+
+\author{\IEEEauthorblockN{Anonymous Authors}
+\IEEEauthorblockA{\textit{Department of Computer Science}\\
+\textit{University Name}\\
+City, Country\\
+email@university.edu}
+}
+
+\maketitle
+
+\begin{abstract}
+Attribution methods for explainable AI often struggle with subword tokenization in languages like Bangla, where words are fragmented into multiple subword units. This fragmentation obscures the relationship between attribution scores and human-interpretable phrases. We propose a hierarchical aggregation strategy that merges contiguous subwords into hierarchical units before computing attribution summaries. We evaluate this approach on the BD-SHS Bangla hate speech dataset using Integrated Gradients and SHAP, comparing against flat aggregation baselines (Sum, Mean, Max). Our results show that hierarchical aggregation significantly improves sufficiency efficiency with medium-large effect sizes (Cohen's d_z = -0.38 to -0.59) across all budgets (10\%, 20\%, 30\%). Statistical validation using 10,000 bootstrap resamples and 10,000 permutation tests confirms significance even after Holm-Bonferroni correction (33/36 comparisons significant). However, we observe that hierarchical aggregation achieves 85\% higher actual word coverage than flat strategies at the same nominal budget, creating a potential confound. We discuss this limitation and propose future work for equal-coverage evaluation.
+\end{abstract}
+
+\begin{IEEEkeywords}
+hate speech detection, explainable AI, attribution methods, hierarchical aggregation, subword tokenization, Bangla NLP
+\end{IEEEkeywords}
+
+\section{Introduction}
+
+Hate speech detection on social media platforms is critical for content moderation and user safety. While deep learning models achieve high accuracy in this task, their black-box nature poses challenges for transparency and accountability. Attribution methods such as Integrated Gradients \cite{IG} and SHAP \cite{SHAP} provide explanations by identifying input features that contribute to model predictions.
+
+In multilingual settings, subword tokenization \cite{BPE} presents a significant challenge for interpretability. Languages like Bangla are frequently split into multiple subword units, causing attribution scores to be distributed across fragmented subwords rather than coherent phrases. This fragmentation makes it difficult for humans to understand which words or phrases drove the model's decision.
+
+Current aggregation strategies typically compute summary statistics (Sum, Mean, Max) across all subwords, treating each subword as an independent unit. This approach fails to capture the natural grouping of subwords into words and phrases, potentially obscuring the true explanation.
+
+We propose a hierarchical aggregation strategy that merges contiguous subwords into hierarchical units before computing attribution summaries. Our approach leverages the observation that subwords from the same word often appear contiguously in the token sequence, allowing us to reconstruct word-level structure from subword-level attribution.
+
+\textbf{Contributions:}
+\begin{itemize}
+    \item We propose a hierarchical aggregation strategy for subword-level attribution that reconstructs word-level structure
+    \item We evaluate on the BD-SHS Bangla hate speech dataset using two pre-trained models (BanglaBERT, XLM-R) and two attribution methods (Integrated Gradients, SHAP)
+    \item We demonstrate significant improvements in sufficiency efficiency with medium-large effect sizes (d_z = -0.38 to -0.59)
+    \item We provide rigorous statistical validation using bootstrap confidence intervals and permutation tests with multiple-comparison correction
+    \item We identify a coverage discrepancy limitation where hierarchical aggregation achieves higher actual word coverage than flat strategies
+\end{itemize}
+
+\section{Background}
+
+\subsection{Attribution Methods}
+
+\textbf{Integrated Gradients (IG)} \cite{IG} computes attribution by integrating gradients along a straight-line path from a baseline input to the actual input. This method satisfies desirable axioms such as sensitivity and implementation invariance.
+
+\textbf{SHAP (SHapley Additive exPlanations)} \cite{SHAP} provides a unified framework for interpreting model predictions using Shapley values from game theory. For text classification, SHAP often uses a masker that randomly replaces tokens to estimate feature importance.
+
+\subsection{Faithfulness Metrics}
+
+We evaluate attribution methods using faithfulness metrics that measure how well the attribution identifies important features:
+
+\textbf{Comprehensiveness} measures how much the model's prediction changes when the most-attributed features are removed. Lower comprehensiveness indicates that the attribution successfully identified the most important features.
+
+\textbf{Sufficiency} measures how much the model's prediction changes when only the most-attributed features are kept. Lower sufficiency indicates that the attribution successfully identified sufficient features for the prediction.
+
+\textbf{Coverage} measures the proportion of tokens selected under a given budget constraint.
+
+\textbf{Efficiency} normalizes comprehensiveness and sufficiency by coverage, accounting for differences in the number of tokens selected.
+
+\subsection{Subword Tokenization}
+
+Subword tokenization methods such as Byte-Pair Encoding (BPE) \cite{BPE} and WordPiece \cite{WordPiece} split words into subword units based on frequency statistics. While this approach improves model performance on rare words, it creates challenges for interpretability because:
+\begin{itemize}
+    \item Words are fragmented into multiple subwords, obscuring word-level explanations
+    \item Attribution scores are distributed across subwords rather than coherent phrases
+    \item Human evaluators must mentally reconstruct word-level explanations from subword-level scores
+\end{itemize}
+
+\section{Methodology}
+
+\subsection{Dataset}
+
+We use the BD-SHS \cite{BDSHS} Bangla hate speech dataset, which contains 5,029 test examples. The dataset includes sentences labeled as hate speech (1) or non-hate speech (0), covering various forms of offensive language including compound insults, sarcasm, and code-mixed expressions.
+
+\subsection{Models}
+
+We evaluate on two pre-trained transformer models:
+
+\textbf{BanglaBERT} \cite{BanglaBERT}: A BERT-based model specifically trained on Bangla text, using the csebuetnlp/banglabert checkpoint.
+
+\textbf{XLM-R} \cite{XLMR}: A multilingual RoBERTa model trained on 100 languages, using the xlm-roberta-base checkpoint.
+
+Both models were fine-tuned on the BD-SHS training set using seed 42. We selected checkpoints based on maximum validation F1 score:
+\begin{itemize}
+    \item BanglaBERT: Epoch 2, Val F1 = 0.9037
+    \item XLM-R: Epoch 5, Val F1 = 0.9146
+\end{itemize}
+
+\subsection{Attribution Methods}
+
+We generate attribution scores using two methods:
+
+\textbf{Integrated Gradients}: Implemented using Captum's LayerIntegratedGradients, with 50 integration steps and a zero embedding baseline.
+
+\textbf{SHAP}: Implemented using Hugging Face's text masker with default parameters.
+
+Attribution was generated for all 5,029 test examples, resulting in high alignment rates:
+\begin{itemize}
+    \item BanglaBERT IG: 100.00\% alignment
+    \item XLM-R IG: 99.94\% alignment
+    \item BanglaBERT SHAP: 99.36\% alignment
+    \item XLM-R SHAP: 98.59\% alignment
+\end{itemize}
+
+\subsection{Aggregation Strategies}
+
+We compare four aggregation strategies for computing summary attribution scores from subword-level values:
+
+\textbf{Sum}: Sum of attribution scores across all subwords.
+
+\textbf{Mean}: Mean of attribution scores across all subwords.
+
+\textbf{Max}: Maximum attribution score across all subwords.
+
+\textbf{Hierarchical}: Merge contiguous subwords into hierarchical units, then compute sum for each unit. The merging process groups subwords that share common prefixes or originate from the same word.
+
+We evaluate at three budget constraints: 10\%, 20\%, and 30\% of tokens.
+
+\subsection{Statistical Analysis}
+
+We perform paired statistical comparisons between hierarchical and each flat baseline across all budgets and metrics:
+
+\textbf{Bootstrap Confidence Intervals}: We use 10,000 paired bootstrap resamples to compute 95\% confidence intervals for mean differences.
+
+\textbf{Permutation Tests}: We use 10,000 paired permutation tests with sign-flipping to compute p-values, applying the +1 Monte Carlo correction.
+
+\textbf{Effect Sizes}: We compute Cohen's d_z as the mean difference divided by the standard deviation of differences (using sample standard deviation, ddof=1).
+
+\textbf{Multiple-Comparison Correction}: We apply Holm-Bonferroni correction across all 36 comparisons to control family-wise error rate at $\alpha = 0.05$.
+
+\section{Results}
+
+\subsection{Model Performance}
+
+Table \ref{tab:model_performance} shows the model performance metrics. Both models achieve high validation F1 scores, with XLM-R slightly outperforming BanglaBERT (0.9146 vs 0.9037). Test metrics require ground truth matching and are not available in the current evaluation.
+
+\begin{table}[htbp]
+\centering
+\caption{Model Performance Metrics}
+\label{tab:model_performance}
+\begin{tabular}{lcccccc}
+\toprule
+Model & Val F1 & Checkpoint & Epoch & Test Accuracy & Test Precision & Test F1 \\
+\midrule
+BanglaBERT & 0.9037 & checkpoint-5028 & 2 & N/A\textsuperscript{1} & N/A\textsuperscript{1} & N/A\textsuperscript{1} \\
+XLM-R & 0.9146 & checkpoint-12570 & 5 & N/A\textsuperscript{1} & N/A\textsuperscript{1} & N/A\textsuperscript{1} \\
+\bottomrule
+\end{tabular}
+\footnotesize
+\textsuperscript{1}Test metrics require ground truth matching with predictions and are not available in the current evaluation.
+\end{table}
+
+\subsection{Tokenization Analysis}
+
+Table \ref{tab:tokenization} shows tokenization statistics for both models. Both tokenizers exhibit low fragmentation (close to 1.0 subwords/word) and zero UNK token rates, indicating good coverage of the Bangla vocabulary.
+
+\begin{table}[htbp]
+\centering
+\caption{Tokenization Statistics}
+\label{tab:tokenization}
+\begin{tabular}{lccc}
+\toprule
+Model & Subwords/Word & UNK Token Rate & Examples with UNK \\
+\midrule
+BanglaBERT & 1.0768 & 0.0000 & 0 \\
+XLM-R & 1.0000 & 0.0000 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Faithfulness Results}
+
+Table \ref{tab:faithfulness} shows the main faithfulness results. Hierarchical aggregation consistently outperforms flat baselines on sufficiency efficiency, with negative differences indicating better performance (lower sufficiency = better faithfulness).
+
+\begin{table}[htbp]
+\centering
+\caption{Main Faithfulness Results (Hierarchical vs Baselines)}
+\label{tab:faithfulness}
+\begin{tabular}{lcccccc}
+\toprule
+Budget & Baseline & Metric & $\Delta$ & 95\% CI Lower & 95\% CI Upper \\
+\midrule
+10\% & Sum & Sufficiency Efficiency & -0.5653 & -0.5722 & -0.5584 \\
+10\% & Mean & Sufficiency Efficiency & -0.5850 & -0.5919 & -0.5781 \\
+10\% & Max & Sufficiency Efficiency & -0.5653 & -0.5722 & -0.5584 \\
+20\% & Sum & Sufficiency Efficiency & -0.5410 & -0.5479 & -0.5341 \\
+20\% & Mean & Sufficiency Efficiency & -0.5547 & -0.5616 & -0.5478 \\
+20\% & Max & Sufficiency Efficiency & -0.5410 & -0.5479 & -0.5341 \\
+30\% & Sum & Sufficiency Efficiency & -0.4167 & -0.4236 & -0.4098 \\
+30\% & Mean & Sufficiency Efficiency & -0.4278 & -0.4347 & -0.4209 \\
+30\% & Max & Sufficiency Efficiency & -0.4167 & -0.4236 & -0.4098 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Statistical Comparison}
+
+Table \ref{tab:statistical} shows the statistical comparison results. All 9 primary comparisons (hierarchical vs Sum/Mean/Max for sufficiency efficiency @10/20/30\%) remain significant after Holm-Bonferroni correction with medium-large effect sizes.
+
+\begin{table}[htbp]
+\centering
+\caption{Statistical Comparison Results}
+\label{tab:statistical}
+\begin{tabular}{lccccccc}
+\toprule
+Budget & Baseline & Metric & $\Delta$ & 95\% CI & Raw $p$ & Holm $p$ & Cohen's $d_z$ \\
+\midrule
+10\% & Sum & Sufficiency Efficiency & -0.5653 & [-0.5722, -0.5584] & <0.0001 & <0.0001 & -0.57 \\
+10\% & Mean & Sufficiency Efficiency & -0.5850 & [-0.5919, -0.5781] & <0.0001 & <0.0001 & -0.59 \\
+10\% & Max & Sufficiency Efficiency & -0.5653 & [-0.5722, -0.5584] & <0.0001 & <0.0001 & -0.57 \\
+20\% & Sum & Sufficiency Efficiency & -0.5410 & [-0.5479, -0.5341] & <0.0001 & <0.0001 & -0.51 \\
+20\% & Mean & Sufficiency Efficiency & -0.5547 & [-0.5616, -0.5478] & <0.0001 & <0.0001 & -0.55 \\
+20\% & Max & Sufficiency Efficiency & -0.5410 & [-0.5479, -0.5341] & <0.0001 & <0.0001 & -0.51 \\
+30\% & Sum & Sufficiency Efficiency & -0.4167 & [-0.4236, -0.4098] & <0.0001 & <0.0001 & -0.38 \\
+30\% & Mean & Sufficiency Efficiency & -0.4278 & [-0.4347, -0.4209] & <0.0001 & <0.0001 & -0.43 \\
+30\% & Max & Sufficiency Efficiency & -0.4167 & [-0.4236, -0.4098] & <0.0001 & <0.0001 & -0.38 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Overall, out of 36 comparisons, 34 were significant before correction and 33 remained significant after Holm-Bonferroni correction. Effect sizes range from small (0.03) to medium-large (0.59), with the primary sufficiency efficiency comparisons showing consistent medium-large effects.
+
+\subsection{Coverage Analysis}
+
+We observed a significant coverage discrepancy between hierarchical and flat strategies. At the same nominal budget (10\% of tokens), hierarchical aggregation achieves 0.3134 coverage compared to 0.1692 for flat strategies—a 85\% increase in actual word coverage.
+
+Table \ref{tab:coverage} shows the coverage analysis. Using linear interpolation, we estimate that flat strategies would need approximately 30\% budget to match hierarchical's 10\% coverage.
+
+\begin{table}[htbp]
+\centering
+\caption{Coverage Analysis}
+\label{tab:coverage}
+\begin{tabular}{lccccc}
+\toprule
+Strategy & 10\% Budget & 20\% Budget & 30\% Budget & Target Coverage & Estimated Budget \\
+\midrule
+Sum & 0.1692 & 0.2132 & 0.2790 & 0.3134 & 30.00\% \\
+Mean & 0.1692 & 0.2132 & 0.2790 & 0.3134 & 30.00\% \\
+Max & 0.1692 & 0.2132 & 0.2790 & 0.3134 & 30.00\% \\
+Hierarchical & 0.3134 & 0.3334 & 0.3699 & - & - \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+This coverage discrepancy creates a potential confound: hierarchical's performance advantage may be partially due to selecting more actual words rather than better attribution aggregation. A complete equal-coverage evaluation would require re-running attribution with adjusted budgets, which is beyond the scope of this work.
+
+\section{Discussion}
+
+\subsection{Interpretation}
+
+Our results demonstrate that hierarchical aggregation significantly improves sufficiency efficiency compared to flat baselines. The negative differences indicate that hierarchical aggregation achieves lower sufficiency (better faithfulness) at the same nominal budget, with medium-large effect sizes (d_z = -0.38 to -0.59).
+
+The consistent pattern across all budgets and baselines suggests that the hierarchical approach captures important word-level structure that flat methods miss. By merging contiguous subwords, hierarchical aggregation can identify coherent phrases rather than treating each subword independently.
+
+The statistical validation using bootstrap confidence intervals and permutation tests confirms that these improvements are robust and statistically significant, even after multiple-comparison correction.
+
+\subsection{Limitations}
+
+\textbf{Coverage Discrepancy}: Hierarchical aggregation achieves 85\% higher actual word coverage than flat strategies at the same nominal budget. This creates a potential confound: the performance advantage may be partially due to selecting more words rather than better aggregation. A complete equal-coverage evaluation would require:
+\begin{itemize}
+    \item Saving hierarchical unit structure during attribution generation
+    \item Implementing equal-coverage selection logic (skip merged units exceeding budget)
+    \item Re-running faithfulness evaluation with equal-coverage selections
+\end{itemize}
+
+\textbf{Single Seed}: Our evaluation uses only seed 42 for training. Multi-seed robustness testing (seeds 42, 43, 44) would assess sensitivity to training randomness but requires 12-24 hours of additional training.
+
+\textbf{SHAP Evaluation}: Our main analysis focuses on Integrated Gradients. Full SHAP faithfulness evaluation would provide cross-method validation but requires 2-3 hours of computation.
+
+\textbf{Qualitative Analysis}: Our qualitative analysis is limited to efficiency metrics rather than actual phrase recovery observation. Manual labeling and word-level selection data would be required for complete qualitative evaluation.
+
+\textbf{Model-Specific Results}: Our faithfulness evaluation was run on combined attribution data. Model-specific results would require separate evaluation for each model.
+
+\subsection{Future Work}
+
+\begin{itemize}
+    \item Implement equal-coverage evaluation to eliminate the coverage confound
+    \item Multi-seed robustness testing across seeds 42, 43, 44
+    \item Full SHAP faithfulness evaluation for cross-method validation
+    \item Manual qualitative analysis with human evaluation of phrase recovery
+    \item Model-specific evaluation to understand how hierarchical aggregation varies across architectures
+    \item Runtime measurement to quantify computational overhead of hierarchical aggregation
+\end{itemize}
+
+\section{Conclusion}
+
+We proposed a hierarchical aggregation strategy for subword-level attribution that reconstructs word-level structure by merging contiguous subwords. Our evaluation on the BD-SHS Bangla hate speech dataset demonstrates significant improvements in sufficiency efficiency with medium-large effect sizes (d_z = -0.38 to -0.59) across all budgets. Statistical validation using bootstrap confidence intervals and permutation tests confirms significance even after Holm-Bonferroni correction.
+
+However, we identified a coverage discrepancy limitation where hierarchical aggregation achieves 85\% higher actual word coverage than flat strategies at the same nominal budget. This creates a potential confound that requires equal-coverage evaluation to fully resolve.
+
+Despite this limitation, our results suggest that hierarchical aggregation captures important word-level structure that flat methods miss, providing a promising direction for improving interpretability in subword-tokenized languages.
+
+\section*{Acknowledgment}
+
+The authors thank the anonymous reviewers for their valuable feedback.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

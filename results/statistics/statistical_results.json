@@ -1,0 +1,1622 @@
+[
+  {
+    "comparison_name": "hierarchical_vs_sum",
+    "metric_name": "comprehensiveness",
+    "hierarchical_stats": {
+      "mean": 0.30358792488155995,
+      "std": 0.431860720162166,
+      "median": 0.0048714876174926,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.1664511628090064,
+      "std": 0.3400614940155811,
+      "median": 0.0013729333877563,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": 0.13713676207255354,
+      "bootstrap_mean": 0.137082560596857,
+      "bootstrap_std": 0.004688161112233414,
+      "bootstrap_se": 0.004688161112233414,
+      "ci_lower": 0.1279708787539667,
+      "ci_upper": 0.14619057414955725,
+      "ci_width": 0.01821969539559054,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": 0.41673643833775026,
+      "mean_difference": 0.13713676207255351,
+      "std_difference": 0.3290731250177096,
+      "interpretation": "small"
+    },
+    "permutation_results": {
+      "observed_difference": 0.13713676207255354,
+      "permutation_mean": 7.8144688381604e-05,
+      "permutation_std": 0.005004204385217148,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "baseline_better",
+    "budget": 10,
+    "baseline_strategy": "sum"
+  },
+  {
+    "comparison_name": "hierarchical_vs_sum",
+    "metric_name": "sufficiency",
+    "hierarchical_stats": {
+      "mean": 0.183562947704096,
+      "std": 0.3414398194197193,
+      "median": 0.0040867328643798,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.3606903307096076,
+      "std": 0.43950578915881916,
+      "median": 0.0078786611557006,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.1771273830055116,
+      "bootstrap_mean": -0.1771427651514092,
+      "bootstrap_std": 0.004646791089716224,
+      "bootstrap_se": 0.004646791089716224,
+      "ci_lower": -0.18631322401317102,
+      "ci_upper": -0.1681620940419236,
+      "ci_width": 0.01815112997124743,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.5410418565299923,
+      "mean_difference": -0.1771273830055116,
+      "std_difference": 0.32738203314163117,
+      "interpretation": "medium"
+    },
+    "permutation_results": {
+      "observed_difference": -0.1771273830055116,
+      "permutation_mean": -8.86238795243923e-05,
+      "permutation_std": 0.005237456526673653,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 10,
+    "baseline_strategy": "sum"
+  },
+  {
+    "comparison_name": "hierarchical_vs_sum",
+    "metric_name": "comp_efficiency",
+    "hierarchical_stats": {
+      "mean": 1.0956986132601882,
+      "std": 2.048350574533172,
+      "median": 0.0108972787857055,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 1.2663210973967083,
+      "std": 2.977786701181503,
+      "median": 0.0105555653572082,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.17062248413652004,
+      "bootstrap_mean": -0.17085378603922655,
+      "bootstrap_std": 0.029923583351238427,
+      "bootstrap_se": 0.029923583351238427,
+      "ci_lower": -0.22899832699982373,
+      "ci_upper": -0.11282235527872504,
+      "ci_width": 0.11617597172109868,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.08016547933803876,
+      "mean_difference": -0.17062248413652045,
+      "std_difference": 2.1283785183525943,
+      "interpretation": "negligible"
+    },
+    "permutation_results": {
+      "observed_difference": -0.17062248413652004,
+      "permutation_mean": 0.0002415835789340456,
+      "permutation_std": 0.03000022799308227,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 10,
+    "baseline_strategy": "sum"
+  },
+  {
+    "comparison_name": "hierarchical_vs_sum",
+    "metric_name": "suff_efficiency",
+    "hierarchical_stats": {
+      "mean": 1.1941146243251535,
+      "std": 2.899026941006866,
+      "median": 0.0286798477172851,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 3.493316707963618,
+      "std": 4.926017823190443,
+      "median": 0.0801301002502441,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -2.2992020836384643,
+      "bootstrap_mean": -2.2995868682729754,
+      "bootstrap_std": 0.05778546805131762,
+      "bootstrap_se": 0.05778546805131762,
+      "ci_lower": -2.4127858341035466,
+      "ci_upper": -2.1882168331016416,
+      "ci_width": 0.22456900100190502,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.5653391264353438,
+      "mean_difference": -2.299202083638465,
+      "std_difference": 4.066943142845462,
+      "interpretation": "medium"
+    },
+    "permutation_results": {
+      "observed_difference": -2.2992020836384643,
+      "permutation_mean": -0.0004607989129418331,
+      "permutation_std": 0.06585021785782894,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 10,
+    "baseline_strategy": "sum"
+  },
+  {
+    "comparison_name": "hierarchical_vs_sum",
+    "metric_name": "comprehensiveness",
+    "hierarchical_stats": {
+      "mean": 0.3093540345969421,
+      "std": 0.4341361206085908,
+      "median": 0.006760835647583,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.2106754361399701,
+      "std": 0.3738236829552356,
+      "median": 0.0022133588790893,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": 0.098678598456972,
+      "bootstrap_mean": 0.09864856221149662,
+      "bootstrap_std": 0.004432941602900151,
+      "bootstrap_se": 0.004432941602900151,
+      "ci_lower": 0.09008772782836946,
+      "ci_upper": 0.1074941992735925,
+      "ci_width": 0.017406471445223032,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": 0.3176744171809352,
+      "mean_difference": 0.09867859845697198,
+      "std_difference": 0.3106280931673778,
+      "interpretation": "small"
+    },
+    "permutation_results": {
+      "observed_difference": 0.098678598456972,
+      "permutation_mean": 7.432430656168474e-05,
+      "permutation_std": 0.004613010463419647,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "baseline_better",
+    "budget": 20,
+    "baseline_strategy": "sum"
+  },
+  {
+    "comparison_name": "hierarchical_vs_sum",
+    "metric_name": "sufficiency",
+    "hierarchical_stats": {
+      "mean": 0.17445330806503853,
+      "std": 0.3303080410608629,
+      "median": 0.0031130313873291,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.3114783258437903,
+      "std": 0.4085427842082787,
+      "median": 0.0070923566818237,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.13702501777875178,
+      "bootstrap_mean": -0.13703170888613678,
+      "bootstrap_std": 0.004245659119883728,
+      "bootstrap_se": 0.004245659119883728,
+      "ci_lower": -0.1453256978473187,
+      "ci_upper": -0.12870901757042136,
+      "ci_width": 0.016616680276897333,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.4615335160041032,
+      "mean_difference": -0.13702501777875176,
+      "std_difference": 0.2968907198010156,
+      "interpretation": "small"
+    },
+    "permutation_results": {
+      "observed_difference": -0.13702501777875178,
+      "permutation_mean": -0.00010115500769987564,
+      "permutation_std": 0.004625414528898448,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 20,
+    "baseline_strategy": "sum"
+  },
+  {
+    "comparison_name": "hierarchical_vs_sum",
+    "metric_name": "comp_efficiency",
+    "hierarchical_stats": {
+      "mean": 1.0133344667509103,
+      "std": 1.649636836196066,
+      "median": 0.0107852816581726,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 1.1201887348393613,
+      "std": 2.08997261203558,
+      "median": 0.0110490322113037,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.106854268088451,
+      "bootstrap_mean": -0.10691866059619756,
+      "bootstrap_std": 0.019642120463507752,
+      "bootstrap_se": 0.019642120463507752,
+      "ci_lower": -0.14539489992868992,
+      "ci_upper": -0.0674063653718509,
+      "ci_width": 0.07798853455683903,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.07687234245179211,
+      "mean_difference": -0.10685426808845103,
+      "std_difference": 1.390022271735261,
+      "interpretation": "negligible"
+    },
+    "permutation_results": {
+      "observed_difference": -0.106854268088451,
+      "permutation_mean": 0.00011474176003366325,
+      "permutation_std": 0.019721815429521526,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 20,
+    "baseline_strategy": "sum"
+  },
+  {
+    "comparison_name": "hierarchical_vs_sum",
+    "metric_name": "suff_efficiency",
+    "hierarchical_stats": {
+      "mean": 0.8068250348437228,
+      "std": 1.7251698601071315,
+      "median": 0.015336275100708,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 1.8315942888580397,
+      "std": 2.5470632779229936,
+      "median": 0.0396976470947265,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -1.0247692540143167,
+      "bootstrap_mean": -1.0249310322160805,
+      "bootstrap_std": 0.02882321699819224,
+      "bootstrap_se": 0.02882321699819224,
+      "ci_lower": -1.0816508217592171,
+      "ci_upper": -0.9688026526918334,
+      "ci_width": 0.11284816906738371,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.5107851383284663,
+      "mean_difference": -1.0247692540143167,
+      "std_difference": 2.0062628630266195,
+      "interpretation": "medium"
+    },
+    "permutation_results": {
+      "observed_difference": -1.0247692540143167,
+      "permutation_mean": -0.0005634530088747872,
+      "permutation_std": 0.031992979493614924,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 20,
+    "baseline_strategy": "sum"
+  },
+  {
+    "comparison_name": "hierarchical_vs_sum",
+    "metric_name": "comprehensiveness",
+    "hierarchical_stats": {
+      "mean": 0.3182818515164067,
+      "std": 0.4378475562891654,
+      "median": 0.0087833404541015,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.2524814074158077,
+      "std": 0.4007921695838356,
+      "median": 0.0035860538482666,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": 0.06580044410059899,
+      "bootstrap_mean": 0.06573584960114533,
+      "bootstrap_std": 0.004189442149880121,
+      "bootstrap_se": 0.004189442149880121,
+      "ci_lower": 0.057573147102425636,
+      "ci_upper": 0.07402544968307867,
+      "ci_width": 0.016452302580653035,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": 0.22390406974593177,
+      "mean_difference": 0.06580044410059899,
+      "std_difference": 0.2938778387336327,
+      "interpretation": "small"
+    },
+    "permutation_results": {
+      "observed_difference": 0.06580044410059899,
+      "permutation_mean": 4.130979645608388e-05,
+      "permutation_std": 0.004270233671901326,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "baseline_better",
+    "budget": 30,
+    "baseline_strategy": "sum"
+  },
+  {
+    "comparison_name": "hierarchical_vs_sum",
+    "metric_name": "sufficiency",
+    "hierarchical_stats": {
+      "mean": 0.15587527924597386,
+      "std": 0.3114680826254789,
+      "median": 0.0022897720336914,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.24301171360257678,
+      "std": 0.3700976364128734,
+      "median": 0.00638347864151,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.08713643435660293,
+      "bootstrap_mean": -0.08711729303396008,
+      "bootstrap_std": 0.003730082756827026,
+      "bootstrap_se": 0.003730082756827026,
+      "ci_lower": -0.09448089671894401,
+      "ci_upper": -0.07981719665279345,
+      "ci_width": 0.014663700066150559,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.33279288501101156,
+      "mean_difference": -0.08713643435660293,
+      "std_difference": 0.261833826025817,
+      "interpretation": "small"
+    },
+    "permutation_results": {
+      "observed_difference": -0.08713643435660293,
+      "permutation_mean": -7.63361111030888e-05,
+      "permutation_std": 0.003922548186727898,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 30,
+    "baseline_strategy": "sum"
+  },
+  {
+    "comparison_name": "hierarchical_vs_sum",
+    "metric_name": "comp_efficiency",
+    "hierarchical_stats": {
+      "mean": 0.9205698812965363,
+      "std": 1.3683556210102312,
+      "median": 0.010886788368225,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.9579449525618826,
+      "std": 1.5638597278607442,
+      "median": 0.0116523742675781,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.03737507126534634,
+      "bootstrap_mean": -0.03762266759896045,
+      "bootstrap_std": 0.01396715280799793,
+      "bootstrap_se": 0.01396715280799793,
+      "ci_lower": -0.06478330778718895,
+      "ci_upper": -0.010303341084864802,
+      "ci_width": 0.05447996670232415,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.03783381504351053,
+      "mean_difference": -0.03737507126534644,
+      "std_difference": 0.987874768176656,
+      "interpretation": "negligible"
+    },
+    "permutation_results": {
+      "observed_difference": -0.03737507126534634,
+      "permutation_mean": -6.256999886665031e-05,
+      "permutation_std": 0.01395211959445321,
+      "extreme_count": 65,
+      "p_value": 0.0065993400659934,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 30,
+    "baseline_strategy": "sum"
+  },
+  {
+    "comparison_name": "hierarchical_vs_sum",
+    "metric_name": "suff_efficiency",
+    "hierarchical_stats": {
+      "mean": 0.5431624393107928,
+      "std": 1.155683800359064,
+      "median": 0.0089579820632934,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.9883850609656719,
+      "std": 1.5778256117512073,
+      "median": 0.0238899588584899,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.44522262165487914,
+      "bootstrap_mean": -0.4451961030401335,
+      "bootstrap_std": 0.01681071731988084,
+      "bootstrap_se": 0.01681071731988084,
+      "ci_lower": -0.47827067847656674,
+      "ci_upper": -0.4125396705587372,
+      "ci_width": 0.06573100791782954,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.3775015497143044,
+      "mean_difference": -0.4452226216548791,
+      "std_difference": 1.1793928316104303,
+      "interpretation": "small"
+    },
+    "permutation_results": {
+      "observed_difference": -0.44522262165487914,
+      "permutation_mean": -0.00043484709973948537,
+      "permutation_std": 0.017970014087456295,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 30,
+    "baseline_strategy": "sum"
+  },
+  {
+    "comparison_name": "hierarchical_vs_mean",
+    "metric_name": "comprehensiveness",
+    "hierarchical_stats": {
+      "mean": 0.30358792488155995,
+      "std": 0.431860720162166,
+      "median": 0.0048714876174926,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.14324059257088245,
+      "std": 0.32021664184841975,
+      "median": 0.0008971095085144,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": 0.1603473323106775,
+      "bootstrap_mean": 0.16033672563592316,
+      "bootstrap_std": 0.00496747954466946,
+      "bootstrap_se": 0.00496747954466946,
+      "ci_lower": 0.15058199522187993,
+      "ci_upper": 0.17027582981605005,
+      "ci_width": 0.019693834594170123,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": 0.45371643706222453,
+      "mean_difference": 0.16034733231067747,
+      "std_difference": 0.3534086914481495,
+      "interpretation": "small"
+    },
+    "permutation_results": {
+      "observed_difference": 0.1603473323106775,
+      "permutation_mean": 7.06894515641145e-05,
+      "permutation_std": 0.005485915217161928,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "baseline_better",
+    "budget": 10,
+    "baseline_strategy": "mean"
+  },
+  {
+    "comparison_name": "hierarchical_vs_mean",
+    "metric_name": "sufficiency",
+    "hierarchical_stats": {
+      "mean": 0.183562947704096,
+      "std": 0.3414398194197193,
+      "median": 0.0040867328643798,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.382908544011657,
+      "std": 0.4530884072958452,
+      "median": 0.0079649686813354,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.19934559630756102,
+      "bootstrap_mean": -0.19937666963750975,
+      "bootstrap_std": 0.004945717899634197,
+      "bootstrap_se": 0.004945717899634197,
+      "ci_lower": -0.2091176074410383,
+      "ci_upper": -0.1897440018425011,
+      "ci_width": 0.019373605598537208,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.5690692893945445,
+      "mean_difference": -0.19934559630756102,
+      "std_difference": 0.35030109693610906,
+      "interpretation": "medium"
+    },
+    "permutation_results": {
+      "observed_difference": -0.19934559630756102,
+      "permutation_mean": -9.414517550711992e-05,
+      "permutation_std": 0.005679953035842034,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 10,
+    "baseline_strategy": "mean"
+  },
+  {
+    "comparison_name": "hierarchical_vs_mean",
+    "metric_name": "comp_efficiency",
+    "hierarchical_stats": {
+      "mean": 1.0956986132601882,
+      "std": 2.048350574533172,
+      "median": 0.0108972787857055,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 1.067658980723423,
+      "std": 2.749919020686571,
+      "median": 0.0073699951171875,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": 0.028039632536765335,
+      "bootstrap_mean": 0.028126569254391547,
+      "bootstrap_std": 0.02986122267752666,
+      "bootstrap_se": 0.02986122267752666,
+      "ci_lower": -0.030676100539351523,
+      "ci_upper": 0.0868297394210461,
+      "ci_width": 0.11750583996039762,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": 0.01309854880645435,
+      "mean_difference": 0.02803963253676521,
+      "std_difference": 2.1406671037442404,
+      "interpretation": "negligible"
+    },
+    "permutation_results": {
+      "observed_difference": 0.028039632536765335,
+      "permutation_mean": 0.00018482501860767628,
+      "permutation_std": 0.03025946957785863,
+      "extreme_count": 3578,
+      "p_value": 0.3578642135786421,
+      "n_permutations": 10000,
+      "significant": false
+    },
+    "direction": "baseline_better",
+    "budget": 10,
+    "baseline_strategy": "mean"
+  },
+  {
+    "comparison_name": "hierarchical_vs_mean",
+    "metric_name": "suff_efficiency",
+    "hierarchical_stats": {
+      "mean": 1.1941146243251535,
+      "std": 2.899026941006866,
+      "median": 0.0286798477172851,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 3.6597178506555066,
+      "std": 5.023344916030572,
+      "median": 0.0868669152259826,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -2.4656032263303533,
+      "bootstrap_mean": -2.46600826528256,
+      "bootstrap_std": 0.05920859205229897,
+      "bootstrap_se": 0.05920859205229897,
+      "ci_lower": -2.581761347002545,
+      "ci_upper": -2.3511736049884266,
+      "ci_width": 0.23058774201411847,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.5883034171109645,
+      "mean_difference": -2.4656032263303533,
+      "std_difference": 4.1910401242243625,
+      "interpretation": "medium"
+    },
+    "permutation_results": {
+      "observed_difference": -2.4656032263303533,
+      "permutation_mean": -0.0004433599003192368,
+      "permutation_std": 0.06847256519656451,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 10,
+    "baseline_strategy": "mean"
+  },
+  {
+    "comparison_name": "hierarchical_vs_mean",
+    "metric_name": "comprehensiveness",
+    "hierarchical_stats": {
+      "mean": 0.3093540345969421,
+      "std": 0.4341361206085908,
+      "median": 0.006760835647583,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.18418578346091183,
+      "std": 0.3549117363622798,
+      "median": 0.0016191005706787,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": 0.12516825113603028,
+      "bootstrap_mean": 0.12514924462619492,
+      "bootstrap_std": 0.004732510136390849,
+      "bootstrap_se": 0.004732510136390849,
+      "ci_lower": 0.11595579501425583,
+      "ci_upper": 0.13454180794077067,
+      "ci_width": 0.018586012926514836,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": 0.3741599948802826,
+      "mean_difference": 0.12516825113603025,
+      "std_difference": 0.33453135783818755,
+      "interpretation": "small"
+    },
+    "permutation_results": {
+      "observed_difference": 0.12516825113603028,
+      "permutation_mean": 5.963242011353378e-05,
+      "permutation_std": 0.005016837639228618,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "baseline_better",
+    "budget": 20,
+    "baseline_strategy": "mean"
+  },
+  {
+    "comparison_name": "hierarchical_vs_mean",
+    "metric_name": "sufficiency",
+    "hierarchical_stats": {
+      "mean": 0.17445330806503853,
+      "std": 0.3303080410608629,
+      "median": 0.0031130313873291,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.3407302339026361,
+      "std": 0.4279191048511273,
+      "median": 0.0078979730606079,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.1662769258375976,
+      "bootstrap_mean": -0.16629392945028934,
+      "bootstrap_std": 0.0046235516688907735,
+      "bootstrap_se": 0.0046235516688907735,
+      "ci_lower": -0.17529362653916097,
+      "ci_upper": -0.1572752221749669,
+      "ci_width": 0.01801840436419408,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.5103264308779041,
+      "mean_difference": -0.16627692583759757,
+      "std_difference": 0.32582464041996567,
+      "interpretation": "medium"
+    },
+    "permutation_results": {
+      "observed_difference": -0.1662769258375976,
+      "permutation_mean": -9.840049352328339e-05,
+      "permutation_std": 0.005170334216945698,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 20,
+    "baseline_strategy": "mean"
+  },
+  {
+    "comparison_name": "hierarchical_vs_mean",
+    "metric_name": "comp_efficiency",
+    "hierarchical_stats": {
+      "mean": 1.0133344667509103,
+      "std": 1.649636836196066,
+      "median": 0.0107852816581726,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.9687200795024705,
+      "std": 1.959330743426998,
+      "median": 0.0083622535069783,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": 0.0446143872484398,
+      "bootstrap_mean": 0.044544955049684594,
+      "bootstrap_std": 0.020274773474534272,
+      "bootstrap_se": 0.020274773474534272,
+      "ci_lower": 0.005166407281731826,
+      "ci_upper": 0.08426017358981917,
+      "ci_width": 0.07909376630808734,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": 0.030949531301577755,
+      "mean_difference": 0.0446143872484397,
+      "std_difference": 1.441520610238299,
+      "interpretation": "negligible"
+    },
+    "permutation_results": {
+      "observed_difference": 0.0446143872484398,
+      "permutation_mean": 4.071566892944387e-05,
+      "permutation_std": 0.02041398060910599,
+      "extreme_count": 288,
+      "p_value": 0.028897110288971104,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "baseline_better",
+    "budget": 20,
+    "baseline_strategy": "mean"
+  },
+  {
+    "comparison_name": "hierarchical_vs_mean",
+    "metric_name": "suff_efficiency",
+    "hierarchical_stats": {
+      "mean": 0.8068250348437228,
+      "std": 1.7251698601071315,
+      "median": 0.015336275100708,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 1.9986769041133796,
+      "std": 2.667580969954894,
+      "median": 0.0423542956511179,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -1.191851869269657,
+      "bootstrap_mean": -1.1919953120375617,
+      "bootstrap_std": 0.030771150623485434,
+      "bootstrap_se": 0.030771150623485434,
+      "ci_lower": -1.252387411235237,
+      "ci_upper": -1.1323977651950599,
+      "ci_width": 0.11998964604017703,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.5521998063761365,
+      "mean_difference": -1.191851869269657,
+      "std_difference": 2.158370675808993,
+      "interpretation": "medium"
+    },
+    "permutation_results": {
+      "observed_difference": -1.191851869269657,
+      "permutation_mean": -0.0005398556683797358,
+      "permutation_std": 0.03495804776407753,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 20,
+    "baseline_strategy": "mean"
+  },
+  {
+    "comparison_name": "hierarchical_vs_mean",
+    "metric_name": "comprehensiveness",
+    "hierarchical_stats": {
+      "mean": 0.3182818515164067,
+      "std": 0.4378475562891654,
+      "median": 0.0087833404541015,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.22692087426371735,
+      "std": 0.3856061216830917,
+      "median": 0.0027491450309753,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": 0.09136097725268935,
+      "bootstrap_mean": 0.09133630924436786,
+      "bootstrap_std": 0.004447900586663754,
+      "bootstrap_se": 0.004447900586663754,
+      "ci_lower": 0.08276655432587213,
+      "ci_upper": 0.10014028560844433,
+      "ci_width": 0.017373731282572205,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": 0.2916313770175428,
+      "mean_difference": 0.09136097725268937,
+      "std_difference": 0.31327554046831396,
+      "interpretation": "small"
+    },
+    "permutation_results": {
+      "observed_difference": 0.09136097725268935,
+      "permutation_mean": 3.296489360918943e-05,
+      "permutation_std": 0.004609690722157384,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "baseline_better",
+    "budget": 30,
+    "baseline_strategy": "mean"
+  },
+  {
+    "comparison_name": "hierarchical_vs_mean",
+    "metric_name": "sufficiency",
+    "hierarchical_stats": {
+      "mean": 0.15587527924597386,
+      "std": 0.3114680826254789,
+      "median": 0.0022897720336914,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.2727939366586329,
+      "std": 0.39186978190031235,
+      "median": 0.00638347864151,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.11691865741265903,
+      "bootstrap_mean": -0.11691515308747616,
+      "bootstrap_std": 0.004168259761689499,
+      "bootstrap_se": 0.004168259761689499,
+      "ci_lower": -0.12509632271657423,
+      "ci_upper": -0.10865360945580256,
+      "ci_width": 0.016442713260771666,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.396652028583597,
+      "mean_difference": -0.11691865741265899,
+      "std_difference": 0.2947637954359223,
+      "interpretation": "small"
+    },
+    "permutation_results": {
+      "observed_difference": -0.11691865741265903,
+      "permutation_mean": -8.379070234459415e-05,
+      "permutation_std": 0.004477545515962648,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 30,
+    "baseline_strategy": "mean"
+  },
+  {
+    "comparison_name": "hierarchical_vs_mean",
+    "metric_name": "comp_efficiency",
+    "hierarchical_stats": {
+      "mean": 0.9205698812965363,
+      "std": 1.3683556210102312,
+      "median": 0.010886788368225,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.858556926528957,
+      "std": 1.499423474846796,
+      "median": 0.0099998116493225,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": 0.06201295476757929,
+      "bootstrap_mean": 0.06191686968678048,
+      "bootstrap_std": 0.014701721709978405,
+      "bootstrap_se": 0.014701721709978405,
+      "ci_lower": 0.033474191724026235,
+      "ci_upper": 0.09082101285364157,
+      "ci_width": 0.05734682112961533,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": 0.059525111634841116,
+      "mean_difference": 0.06201295476757905,
+      "std_difference": 1.0417948503481975,
+      "interpretation": "negligible"
+    },
+    "permutation_results": {
+      "observed_difference": 0.06201295476757929,
+      "permutation_mean": -0.00011365963781519168,
+      "permutation_std": 0.014726629452418163,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "baseline_better",
+    "budget": 30,
+    "baseline_strategy": "mean"
+  },
+  {
+    "comparison_name": "hierarchical_vs_mean",
+    "metric_name": "suff_efficiency",
+    "hierarchical_stats": {
+      "mean": 0.5431624393107928,
+      "std": 1.155683800359064,
+      "median": 0.0089579820632934,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 1.1106943456174554,
+      "std": 1.6774585578024566,
+      "median": 0.0244331359863281,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.5675319063066626,
+      "bootstrap_mean": -0.5675578556346078,
+      "bootstrap_std": 0.01867387177578033,
+      "bootstrap_se": 0.01867387177578033,
+      "ci_lower": -0.603827075502107,
+      "ci_upper": -0.5305916807201176,
+      "ci_width": 0.07323539478198937,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.4310557453044754,
+      "mean_difference": -0.5675319063066626,
+      "std_difference": 1.316609075482308,
+      "interpretation": "small"
+    },
+    "permutation_results": {
+      "observed_difference": -0.5675319063066626,
+      "permutation_mean": -0.0004678752710279131,
+      "permutation_std": 0.02016641646436347,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 30,
+    "baseline_strategy": "mean"
+  },
+  {
+    "comparison_name": "hierarchical_vs_max",
+    "metric_name": "comprehensiveness",
+    "hierarchical_stats": {
+      "mean": 0.30358792488155995,
+      "std": 0.431860720162166,
+      "median": 0.0048714876174926,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.16209963688367712,
+      "std": 0.33568775294390696,
+      "median": 0.0013219714164733,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": 0.14148828799788282,
+      "bootstrap_mean": 0.14146431520101652,
+      "bootstrap_std": 0.004774496221790132,
+      "bootstrap_se": 0.004774496221790132,
+      "ci_lower": 0.13229416712811912,
+      "ci_upper": 0.15100739704101232,
+      "ci_width": 0.018713229912893203,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": 0.4192791746944791,
+      "mean_difference": 0.1414882879978828,
+      "std_difference": 0.33745603535158325,
+      "interpretation": "small"
+    },
+    "permutation_results": {
+      "observed_difference": 0.14148828799788282,
+      "permutation_mean": 6.421711932467107e-05,
+      "permutation_std": 0.005142828449108743,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "baseline_better",
+    "budget": 10,
+    "baseline_strategy": "max"
+  },
+  {
+    "comparison_name": "hierarchical_vs_max",
+    "metric_name": "sufficiency",
+    "hierarchical_stats": {
+      "mean": 0.183562947704096,
+      "std": 0.3414398194197193,
+      "median": 0.0040867328643798,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.3661301169131669,
+      "std": 0.4433316129859106,
+      "median": 0.0083274841308593,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.18256716920907087,
+      "bootstrap_mean": -0.18258208361987435,
+      "bootstrap_std": 0.004740402466468506,
+      "bootstrap_se": 0.004740402466468506,
+      "ci_lower": -0.19183910153501282,
+      "ci_upper": -0.17332407924101872,
+      "ci_width": 0.0185150222939941,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.545376954133275,
+      "mean_difference": -0.1825671692090709,
+      "std_difference": 0.33475409590640043,
+      "interpretation": "medium"
+    },
+    "permutation_results": {
+      "observed_difference": -0.18256716920907087,
+      "permutation_mean": -7.544192637993385e-05,
+      "permutation_std": 0.0053543423610762295,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 10,
+    "baseline_strategy": "max"
+  },
+  {
+    "comparison_name": "hierarchical_vs_max",
+    "metric_name": "comp_efficiency",
+    "hierarchical_stats": {
+      "mean": 1.0956986132601882,
+      "std": 2.048350574533172,
+      "median": 0.0108972787857055,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 1.2255454294995567,
+      "std": 2.914987410716335,
+      "median": 0.0099906325340271,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.12984681623936845,
+      "bootstrap_mean": -0.12986389541202492,
+      "bootstrap_std": 0.03044546422463276,
+      "bootstrap_se": 0.03044546422463276,
+      "ci_lower": -0.18948489990881845,
+      "ci_upper": -0.07019036625161902,
+      "ci_width": 0.11929453365719943,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.05987965206469279,
+      "mean_difference": -0.12984681623936883,
+      "std_difference": 2.1684631049473184,
+      "interpretation": "negligible"
+    },
+    "permutation_results": {
+      "observed_difference": -0.12984681623936845,
+      "permutation_mean": 0.000156970084041338,
+      "permutation_std": 0.0306763160487599,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 10,
+    "baseline_strategy": "max"
+  },
+  {
+    "comparison_name": "hierarchical_vs_max",
+    "metric_name": "suff_efficiency",
+    "hierarchical_stats": {
+      "mean": 1.1941146243251535,
+      "std": 2.899026941006866,
+      "median": 0.0286798477172851,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 3.53539847502863,
+      "std": 4.954441426032443,
+      "median": 0.0868123769760131,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -2.3412838507034763,
+      "bootstrap_mean": -2.341584995731707,
+      "bootstrap_std": 0.05818086043890256,
+      "bootstrap_se": 0.05818086043890256,
+      "ci_lower": -2.455926935857074,
+      "ci_upper": -2.2283745109090156,
+      "ci_width": 0.22755242494805827,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.5703401985415907,
+      "mean_difference": -2.3412838507034768,
+      "std_difference": 4.105065462140566,
+      "interpretation": "medium"
+    },
+    "permutation_results": {
+      "observed_difference": -2.3412838507034763,
+      "permutation_mean": -0.00036541038810570435,
+      "permutation_std": 0.06658023777914676,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 10,
+    "baseline_strategy": "max"
+  },
+  {
+    "comparison_name": "hierarchical_vs_max",
+    "metric_name": "comprehensiveness",
+    "hierarchical_stats": {
+      "mean": 0.3093540345969421,
+      "std": 0.4341361206085908,
+      "median": 0.006760835647583,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.20682136788564723,
+      "std": 0.37003507938630115,
+      "median": 0.002179205417633,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": 0.10253266671129488,
+      "bootstrap_mean": 0.1025266946776464,
+      "bootstrap_std": 0.004470435814738772,
+      "bootstrap_se": 0.004470435814738772,
+      "ci_lower": 0.09394360738343162,
+      "ci_upper": 0.11140879392617825,
+      "ci_width": 0.017465186542746633,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": 0.325477919759125,
+      "mean_difference": 0.10253266671129485,
+      "std_difference": 0.3150218816292538,
+      "interpretation": "small"
+    },
+    "permutation_results": {
+      "observed_difference": 0.10253266671129488,
+      "permutation_mean": 8.279549024181898e-05,
+      "permutation_std": 0.0046578476556142084,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "baseline_better",
+    "budget": 20,
+    "baseline_strategy": "max"
+  },
+  {
+    "comparison_name": "hierarchical_vs_max",
+    "metric_name": "sufficiency",
+    "hierarchical_stats": {
+      "mean": 0.17445330806503853,
+      "std": 0.3303080410608629,
+      "median": 0.0031130313873291,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.31559674685872235,
+      "std": 0.4113554577655415,
+      "median": 0.008706510066986,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.14114343879368382,
+      "bootstrap_mean": -0.14115618258958326,
+      "bootstrap_std": 0.004320966452672697,
+      "bootstrap_se": 0.004320966452672697,
+      "ci_lower": -0.14951347370072046,
+      "ci_upper": -0.13266621983916377,
+      "ci_width": 0.016847253861556694,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.46231926466624046,
+      "mean_difference": -0.14114343879368382,
+      "std_difference": 0.305294305431072,
+      "interpretation": "small"
+    },
+    "permutation_results": {
+      "observed_difference": -0.14114343879368382,
+      "permutation_mean": -8.988770138086012e-05,
+      "permutation_std": 0.004748499891672539,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 20,
+    "baseline_strategy": "max"
+  },
+  {
+    "comparison_name": "hierarchical_vs_max",
+    "metric_name": "comp_efficiency",
+    "hierarchical_stats": {
+      "mean": 1.0133344667509103,
+      "std": 1.649636836196066,
+      "median": 0.0107852816581726,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 1.1011685864540532,
+      "std": 2.07182601231786,
+      "median": 0.0108711719512939,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.08783411970314292,
+      "bootstrap_mean": -0.087829235923257,
+      "bootstrap_std": 0.019676598638351847,
+      "bootstrap_se": 0.019676598638351847,
+      "ci_lower": -0.12640710330149862,
+      "ci_upper": -0.049455220584477357,
+      "ci_width": 0.07695188271702127,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.06253804027370397,
+      "mean_difference": -0.08783411970314314,
+      "std_difference": 1.4044910796489363,
+      "interpretation": "negligible"
+    },
+    "permutation_results": {
+      "observed_difference": -0.08783411970314292,
+      "permutation_mean": 0.00015214299886588724,
+      "permutation_std": 0.01994309921015273,
+      "extreme_count": 1,
+      "p_value": 0.00019998000199980003,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 20,
+    "baseline_strategy": "max"
+  },
+  {
+    "comparison_name": "hierarchical_vs_max",
+    "metric_name": "suff_efficiency",
+    "hierarchical_stats": {
+      "mean": 0.8068250348437228,
+      "std": 1.7251698601071315,
+      "median": 0.015336275100708,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 1.8530709093563353,
+      "std": 2.5614575946555793,
+      "median": 0.0413675308227539,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -1.0462458745126124,
+      "bootstrap_mean": -1.0463849467223842,
+      "bootstrap_std": 0.029132539021110543,
+      "bootstrap_se": 0.029132539021110543,
+      "ci_lower": -1.1030497646054078,
+      "ci_upper": -0.9896343433551449,
+      "ci_width": 0.11341542125026294,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.5125992463271316,
+      "mean_difference": -1.046245874512613,
+      "std_difference": 2.0410601108159216,
+      "interpretation": "medium"
+    },
+    "permutation_results": {
+      "observed_difference": -1.0462458745126124,
+      "permutation_mean": -0.00048298222356810497,
+      "permutation_std": 0.03249691639914938,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 20,
+    "baseline_strategy": "max"
+  },
+  {
+    "comparison_name": "hierarchical_vs_max",
+    "metric_name": "comprehensiveness",
+    "hierarchical_stats": {
+      "mean": 0.3182818515164067,
+      "std": 0.4378475562891654,
+      "median": 0.0087833404541015,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.2491360960220746,
+      "std": 0.39876404388807707,
+      "median": 0.0036903023719787,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": 0.0691457554943321,
+      "bootstrap_mean": 0.069121124702749,
+      "bootstrap_std": 0.004273420306245635,
+      "bootstrap_se": 0.004273420306245635,
+      "ci_lower": 0.060918201667654555,
+      "ci_upper": 0.07754800971715897,
+      "ci_width": 0.016629808049504417,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": 0.2288892273835892,
+      "mean_difference": 0.06914575549433215,
+      "std_difference": 0.3020926597757817,
+      "interpretation": "small"
+    },
+    "permutation_results": {
+      "observed_difference": 0.0691457554943321,
+      "permutation_mean": 5.1835179112643846e-05,
+      "permutation_std": 0.004394296081740409,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "baseline_better",
+    "budget": 30,
+    "baseline_strategy": "max"
+  },
+  {
+    "comparison_name": "hierarchical_vs_max",
+    "metric_name": "sufficiency",
+    "hierarchical_stats": {
+      "mean": 0.15587527924597386,
+      "std": 0.3114680826254789,
+      "median": 0.0022897720336914,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.24704301463721365,
+      "std": 0.37279320587497333,
+      "median": 0.0076090097427368,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.09116773539123979,
+      "bootstrap_mean": -0.09117092642819438,
+      "bootstrap_std": 0.0038036948776596757,
+      "bootstrap_se": 0.0038036948776596757,
+      "ci_lower": -0.09861730197112663,
+      "ci_upper": -0.08371261244669997,
+      "ci_width": 0.014904689524426654,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.33968287753743703,
+      "mean_difference": -0.09116773539123978,
+      "std_difference": 0.2683907297658594,
+      "interpretation": "small"
+    },
+    "permutation_results": {
+      "observed_difference": -0.09116773539123979,
+      "permutation_mean": -8.817836609311613e-05,
+      "permutation_std": 0.003992175200008202,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 30,
+    "baseline_strategy": "max"
+  },
+  {
+    "comparison_name": "hierarchical_vs_max",
+    "metric_name": "comp_efficiency",
+    "hierarchical_stats": {
+      "mean": 0.9205698812965363,
+      "std": 1.3683556210102312,
+      "median": 0.010886788368225,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 0.9482021533736005,
+      "std": 1.5613389464649134,
+      "median": 0.0118138790130615,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.0276322720770642,
+      "bootstrap_mean": -0.027711772380739137,
+      "bootstrap_std": 0.01430378525323511,
+      "bootstrap_se": 0.01430378525323511,
+      "ci_lower": -0.0554536825630084,
+      "ci_upper": 0.00042583092850722264,
+      "ci_width": 0.055879513491515626,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.027048007648758702,
+      "mean_difference": -0.02763227207706421,
+      "std_difference": 1.0216010153462198,
+      "interpretation": "negligible"
+    },
+    "permutation_results": {
+      "observed_difference": -0.0276322720770642,
+      "permutation_mean": -5.0795543468317885e-05,
+      "permutation_std": 0.014471224654790367,
+      "extreme_count": 543,
+      "p_value": 0.054394560543945605,
+      "n_permutations": 10000,
+      "significant": false
+    },
+    "direction": "hierarchical_better",
+    "budget": 30,
+    "baseline_strategy": "max"
+  },
+  {
+    "comparison_name": "hierarchical_vs_max",
+    "metric_name": "suff_efficiency",
+    "hierarchical_stats": {
+      "mean": 0.5431624393107928,
+      "std": 1.155683800359064,
+      "median": 0.0089579820632934,
+      "n": 5029
+    },
+    "baseline_stats": {
+      "mean": 1.0044385489632577,
+      "std": 1.5909587116872537,
+      "median": 0.0266315340995788,
+      "n": 5029
+    },
+    "bootstrap_results": {
+      "observed_difference": -0.4612761096524649,
+      "bootstrap_mean": -0.4613348289694837,
+      "bootstrap_std": 0.017098834304013464,
+      "bootstrap_se": 0.017098834304013464,
+      "ci_lower": -0.495367223987373,
+      "ci_upper": -0.4276454291497889,
+      "ci_width": 0.06772179483758406,
+      "n_resamples": 10000,
+      "confidence_level": 0.95
+    },
+    "effect_size": {
+      "cohens_d_z": -0.3818855152219838,
+      "mean_difference": -0.461276109652465,
+      "std_difference": 1.2078910858515615,
+      "interpretation": "small"
+    },
+    "permutation_results": {
+      "observed_difference": -0.4612761096524649,
+      "permutation_mean": -0.0004615875730487726,
+      "permutation_std": 0.018202803754795212,
+      "extreme_count": 0,
+      "p_value": 9.999000099990002e-05,
+      "n_permutations": 10000,
+      "significant": true
+    },
+    "direction": "hierarchical_better",
+    "budget": 30,
+    "baseline_strategy": "max"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "model": "BanglaBERT",
+    "expected_epoch": 2,
+    "programmatic_best_epoch": 2.0,
+    "programmatic_best_f1": 0.9036792062835882,
+    "used_checkpoint": "checkpoint-5028",
+    "verification_status": "PASS"
+  },
+  {
+    "model": "XLM-R",
+    "expected_epoch": 5,
+    "programmatic_best_epoch": 5.0,
+    "programmatic_best_f1": 0.9146366427840328,
+    "used_checkpoint": "checkpoint-12570",
+    "verification_status": "PASS"
+  }
+]

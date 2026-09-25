@@ -1,0 +1,43 @@
+{
+  "test_size": 5029,
+  "per_condition": {
+    "BanglaBERT_IG": {
+      "total": 5029,
+      "clean": 0,
+      "token_count_mismatch": 5029,
+      "word_reconstruction_fail": 730,
+      "unexplained_tokens": 2442,
+      "excluded": 0
+    },
+    "BanglaBERT_SHAP": {
+      "total": 5029,
+      "clean": 0,
+      "token_count_mismatch": 5029,
+      "word_reconstruction_fail": 395,
+      "unexplained_tokens": 0,
+      "excluded": 0
+    },
+    "XLM-R_IG": {
+      "total": 5029,
+      "clean": 0,
+      "token_count_mismatch": 5029,
+      "word_reconstruction_fail": 3045,
+      "unexplained_tokens": 4,
+      "excluded": 0
+    },
+    "XLM-R_SHAP": {
+      "total": 5029,
+      "clean": 0,
+      "token_count_mismatch": 5029,
+      "word_reconstruction_fail": 2646,
+      "unexplained_tokens": 0,
+      "excluded": 0
+    }
+  },
+  "total_warnings": 29378,
+  "warning_breakdown": {
+    "token_count_mismatch": 20116,
+    "unk_token": 2446,
+    "word_reconstruction_fail": 6816
+  }
+}

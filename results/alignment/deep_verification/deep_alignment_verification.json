@@ -1,0 +1,46 @@
+[
+  {
+    "model_method": "BanglaBERT_IG",
+    "total_examples": 5029,
+    "unique_ids": 5029,
+    "duplicate_ids": 0,
+    "missing_ids": 0,
+    "extra_ids": 0,
+    "reconstruction_issues": 0,
+    "nan_invalid_scores": 0,
+    "alignment_rate": 1.0
+  },
+  {
+    "model_method": "BanglaBERT_SHAP",
+    "total_examples": 5029,
+    "unique_ids": 5029,
+    "duplicate_ids": 0,
+    "missing_ids": 0,
+    "extra_ids": 0,
+    "reconstruction_issues": 32,
+    "nan_invalid_scores": 0,
+    "alignment_rate": 0.993636905945516
+  },
+  {
+    "model_method": "XLM-R_IG",
+    "total_examples": 5029,
+    "unique_ids": 5029,
+    "duplicate_ids": 0,
+    "missing_ids": 0,
+    "extra_ids": 0,
+    "reconstruction_issues": 3,
+    "nan_invalid_scores": 0,
+    "alignment_rate": 0.9994034599323921
+  },
+  {
+    "model_method": "XLM-R_SHAP",
+    "total_examples": 5029,
+    "unique_ids": 5029,
+    "duplicate_ids": 0,
+    "missing_ids": 0,
+    "extra_ids": 0,
+    "reconstruction_issues": 71,
+    "nan_invalid_scores": 0,
+    "alignment_rate": 0.9858818850666137
+  }
+]

@@ -1,0 +1,133 @@
+{
+  "dataset": {
+    "name": "BD-SHS",
+    "test_size": 5029
+  },
+  "models": [
+    "BanglaBERT",
+    "XLM-R"
+  ],
+  "model_paths": {
+    "BanglaBERT": "outputs/banglabert-bdshs",
+    "XLM-R": "outputs/xlmr-bdshs"
+  },
+  "attribution": {
+    "methods": [
+      "Integrated Gradients",
+      "SHAP"
+    ],
+    "integrated_gradients": {
+      "library": "captum",
+      "layer": "embedding",
+      "baseline": "all-PAD",
+      "preserve_special_tokens": true,
+      "initial_steps": 50,
+      "max_steps": 300,
+      "convergence_threshold": 0.05,
+      "adaptive_steps": true
+    },
+    "shap": {
+      "library": "shap",
+      "explainer": "text masker",
+      "pipeline": "HuggingFace classification",
+      "level": "subword"
+    }
+  },
+  "aggregation": {
+    "strategies": [
+      "Sum",
+      "Mean",
+      "Max",
+      "Hierarchical"
+    ],
+    "hierarchical": {
+      "max_merges": null,
+      "interaction_based": true
+    }
+  },
+  "budgets": [
+    0.10,
+    0.20,
+    0.30
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "bootstrap": {
+    "n_resamples": 10000,
+    "confidence_level": 0.95,
+    "random_state": 42
+  },
+  "permutation": {
+    "n_permutations": 10000,
+    "random_state": 42
+  },
+  "training": {
+    "num_epochs": 15,
+    "early_stopping_patience": 3,
+    "batch_size": 16,
+    "learning_rate": 2e-5,
+    "max_length": 128,
+    "weight_decay": 0.01,
+    "metric_for_best_model": "f1",
+    "greater_is_better": true
+  },
+  "evaluation": {
+    "metrics": [
+      "accuracy",
+      "precision",
+      "recall",
+      "f1"
+    ],
+    "faithfulness": [
+      "comprehensiveness",
+      "sufficiency",
+      "coverage",
+      "comprehensiveness_efficiency",
+      "sufficiency_efficiency"
+    ],
+    "budgets_percent": [
+      10,
+      20,
+      30
+    ]
+  },
+  "data": {
+    "text_column": "sentence",
+    "label_column": "hate speech",
+    "train_file": "train.csv",
+    "val_file": "val.csv",
+    "test_file": "test.csv"
+  },
+  "paths": {
+    "base_dir": ".",
+    "output_dir": "outputs",
+    "cache_dir": ".cache",
+    "results_dir": "results",
+    "configs_dir": "configs",
+    "training_dir": "training",
+    "evaluation_dir": "evaluation",
+    "statistics_dir": "statistics",
+    "analysis_dir": "analysis"
+  },
+  "logging": {
+    "log_file": "experiment_log.txt",
+    "log_level": "INFO",
+    "save_predictions": true,
+    "save_attributions": true,
+    "save_per_example_results": true
+  },
+  "reproducibility": {
+    "seed": 42,
+    "deterministic": true,
+    "benchmark": false
+  },
+  "metadata": {
+    "experiment_id": "bdshs_bootstrap_v1",
+    "description": "Full bootstrap and permutation test implementation with multiple seeds",
+    "created_date": "2026-09-25",
+    "version": "1.0"
+  }
+}
