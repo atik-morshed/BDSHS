@@ -1,0 +1,55 @@
+================================================================================
+PHASE 9 FULL — EQUAL-COVERAGE EVALUATION
+================================================================================
+
+Loading nominal-budget results from: E:\BD SHS\results\evaluation\per_example\per_example_faithfulness_results.csv
+Loaded 60348 rows
+
+Loading word-level attribution data from: E:\BD SHS\outputs\attribution\phase2
+Loaded word-level attribution files:
+  IG BanglaBERT: 65232 rows
+  IG XLM-R: 63856 rows
+
+================================================================================
+IMPLEMENTATION LIMITATION
+================================================================================
+
+To implement full equal-coverage, we need:
+1. Hierarchical unit structure (which words belong to which merged units)
+2. Word-level attribution scores for all words
+3. Ability to re-run the forward passes with different word selections
+
+The current CSV format does not include:
+- Hierarchical unit membership information
+- Original word-level attribution scores
+- Token-to-word mapping for re-evaluation
+
+================================================================================
+PROPOSED SOLUTION
+================================================================================
+
+To implement full equal-coverage, we need to:
+1. Modify the attribution generation script to save hierarchical unit structure
+2. Save word-level attribution scores for all words
+3. Create a new aggregation script that supports equal-coverage mode
+4. Re-run the faithfulness evaluation with equal-coverage selections
+
+This requires significant modification to the existing pipeline:
+- Modify attribution script (Phase 2)
+- Create new equal-coverage aggregation script
+- Re-run attribution for all examples
+- Estimated time: 6-8 hours
+
+================================================================================
+ALTERNATIVE: APPROXIMATE EQUAL-COVERAGE ANALYSIS
+================================================================================
+
+Given the time constraints, we can:
+1. Document the coverage discrepancy (already done)
+2. Calculate the hierarchical advantage due to coverage
+3. Acknowledge this as a limitation in the paper
+4. Report nominal-budget results with a clear caveat
+
+This is the pragmatic approach for the current timeline.
+
+Implementation plan saved to: E:\BD SHS\results\evaluation\equal_coverage\equal_coverage_implementation_plan.md

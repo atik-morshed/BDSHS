@@ -1,0 +1,47 @@
+================================================================================
+PHASE 8 — VERIFY AND CONSOLIDATE EFFECT SIZES IN MASTER TABLE
+================================================================================
+
+Loading corrected results from: E:\BD SHS\results\statistics\corrected_statistical_results.json
+Loaded 36 comparisons
+
+Loading per-example data from: E:\BD SHS\results\evaluation\per_example\per_example_faithfulness_results.csv
+Loaded 60348 rows
+
+================================================================================
+Verifying Cohen's d_z calculations
+================================================================================
+hierarchical_vs_sum - comprehensiveness @ 10%: ✓ MATCH
+  Manual: 0.416736, Reported: 0.416736
+hierarchical_vs_sum - sufficiency @ 10%: ✓ MATCH
+  Manual: -0.541042, Reported: -0.541042
+hierarchical_vs_sum - comp_efficiency @ 10%: ✓ MATCH
+  Manual: -0.080165, Reported: -0.080165
+hierarchical_vs_sum - suff_efficiency @ 10%: ✓ MATCH
+  Manual: -0.565339, Reported: -0.565339
+hierarchical_vs_sum - comprehensiveness @ 20%: ✓ MATCH
+  Manual: 0.317674, Reported: 0.317674
+hierarchical_vs_sum - sufficiency @ 20%: ✓ MATCH
+  Manual: -0.461534, Reported: -0.461534
+hierarchical_vs_sum - comp_efficiency @ 20%: ✓ MATCH
+  Manual: -0.076872, Reported: -0.076872
+hierarchical_vs_sum - suff_efficiency @ 20%: ✓ MATCH
+  Manual: -0.510785, Reported: -0.510785
+hierarchical_vs_sum - comprehensiveness @ 30%: ✓ MATCH
+  Manual: 0.223904, Reported: 0.223904
+hierarchical_vs_sum - sufficiency @ 30%: ✓ MATCH
+  Manual: -0.332793, Reported: -0.332793
+hierarchical_vs_sum - comp_efficiency @ 30%: ✓ MATCH
+  Manual: -0.037834, Reported: -0.037834
+hierarchical_vs_sum - suff_efficiency @ 30%: ✓ MATCH
+  Manual: -0.377502, Reported: -0.377502
+
+Verification summary: 12/12 effect sizes verified
+
+================================================================================
+Creating consolidated master table
+================================================================================
+Master table CSV saved to: E:\BD SHS\results\statistics\final_master_table.csv
+Master table TXT saved to: E:\BD SHS\results\statistics\final_master_table.txt
+
+Report saved to: E:\BD SHS\results\statistics\effect_size_verification_report.md

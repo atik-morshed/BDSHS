@@ -1,0 +1,3 @@
+model,accuracy,precision,recall,f1,val_f1,checkpoint,epoch
+BanglaBERT,N/A (requires ground truth),N/A (requires ground truth),N/A (requires ground truth),N/A (requires ground truth),0.9037,checkpoint-5028,2
+XLM-R,N/A (requires ground truth),N/A (requires ground truth),N/A (requires ground truth),N/A (requires ground truth),0.9146,checkpoint-12570,5

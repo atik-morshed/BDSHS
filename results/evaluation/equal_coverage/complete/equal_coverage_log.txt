@@ -1,0 +1,125 @@
+================================================================================
+PHASE 9 COMPLETE — EQUAL-COVERAGE EVALUATION (FULL IMPLEMENTATION)
+================================================================================
+
+Loading word-level attribution data from: E:\BD SHS\outputs\attribution\phase2
+Loaded word-level attribution files:
+  IG BanglaBERT: 65232 rows
+  IG XLM-R: 63856 rows
+
+IG BanglaBERT columns: ['sample_idx', 'text_snippet', 'predicted_label', 'word', 'subwords', 'attr_sum', 'attr_mean', 'attr_max']
+IG XLM-R columns: ['sample_idx', 'text_snippet', 'predicted_label', 'word', 'subwords', 'attr_sum', 'attr_mean', 'attr_max']
+
+================================================================================
+PHASE 1: DATA STRUCTURE ANALYSIS
+================================================================================
+
+Current data structure includes:
+- sample_idx: Example identifier
+- text_snippet: Text segment
+- predicted_label: Model prediction
+- word: Word-level token
+- subwords: Subword count string (e.g., '2 subwords')
+- attr_sum, attr_mean, attr_max: Attribution scores
+
+MISSING for full equal-coverage implementation:
+- Hierarchical unit structure (which words belong to which merged units)
+- Unit-level interaction/removal-effect scores
+- Token-to-word mapping for re-masking
+- Model forward-pass capability for re-evaluation
+
+================================================================================
+PHASE 2: IMPLEMENTATION REQUIREMENTS
+================================================================================
+
+For full equal-coverage evaluation, we need:
+  1. Modify Phase 2 attribution script to save hierarchical unit structure
+  2. Save unit-level interaction scores for each merged unit
+  3. Save word-level token indices for re-masking
+  4. Implement selection functions for three variants:
+     - Exact-budget with intra-unit trimming
+     - Floor (no overshoot)
+     - Ceiling (allow overshoot)
+  5. Re-run forward passes with new selections
+  6. Compute Comp@C and Suff@C at matched coverage
+  7. Run statistical analysis on matched-coverage results
+  8. Generate coverage-vs-metric line plots
+
+Estimated time:
+  - Modify attribution script: 2 hours
+  - Re-run Phase 2 attribution: 12-16 hours
+  - Implement selection functions: 2 hours
+  - Re-run forward passes (1,000 examples × 6 coverage × 4 strategies × 2 modes × 2 models × 3 variants): 8-12 hours
+  - Statistical analysis: 1 hour
+  - Visualization: 1 hour
+  **Total: 26-34 hours**
+
+================================================================================
+PHASE 3: DETAILED IMPLEMENTATION PLAN
+================================================================================
+
+Detailed implementation plan:
+
+step_1_attribution_modification:
+  Task: Modify Phase 2 attribution script to save hierarchical unit structure
+  Files: ['attribution/phase2_corrected_attribution.py']
+  Outputs: ['hierarchical_unit_structure.json', 'unit_interaction_scores.json']
+  Time: 2 hours
+
+step_2_rerun_attribution:
+  Task: Re-run Phase 2 attribution with new outputs
+  Outputs: ['ig_banglabert_token.json', 'ig_xlm_r_token.json', 'shap_banglabert_token.json', 'shap_xlm_r_token.json']
+  Command: python attribution/phase2_corrected_attribution.py
+  Time: 12-16 hours
+
+step_3_selection_functions:
+  Task: Implement three hierarchical selection variants
+  Files: ['evaluation/equal_coverage_selection.py']
+  Time: 2 hours
+
+step_4_stratified_subsample:
+  Task: Create stratified subsample (1,000 examples)
+  Criteria: ['balanced by class', 'balanced by sentence-length quartile']
+  Time: 30 minutes
+
+step_5_matched_coverage_evaluation:
+  Task: Re-run forward passes with matched-coverage selections
+  Grid: ['5%', '10%', '15%', '20%', '25%', '30%']
+  Strategies: ['sum', 'mean', 'max', 'hierarchical']
+  Variants: ['trimming', 'floor', 'ceiling']
+  Time: 8-12 hours
+
+step_6_statistical_analysis:
+  Task: Run statistical analysis on matched-coverage results
+  Methods: ['bootstrap 10k', 'permutation 10k', "Cohen's dz", 'Holm-Bonferroni']
+  Time: 1 hour
+
+step_7_sensitivity_analysis:
+  Task: Generate unit size histogram and trimming frequency
+  Outputs: ['unit_size_histogram.csv', 'trimming_frequency.csv']
+  Time: 30 minutes
+
+step_8_visualization:
+  Task: Generate coverage-vs-metric line plots
+  Outputs: ['coverage_vs_metric.png']
+  Time: 1 hour
+
+================================================================================
+PHASE 4: CURRENT LIMITATIONS AND PREREQUISITES
+================================================================================
+
+Current limitations:
+  1. Current word-level CSV does not include hierarchical unit structure
+  2. No unit-level interaction scores available
+  3. No token-to-word mapping for re-masking
+  4. No forward-pass capability in current evaluation script
+  5. Cannot implement three selection variants without unit structure
+
+Prerequisites for full implementation:
+  1. Modify attribution generation to save hierarchical unit structure
+  2. Save unit-level interaction scores during attribution
+  3. Implement re-masking capability in evaluation script
+  4. Ensure model checkpoints are accessible for forward passes
+  5. Budget 26-34 hours for complete implementation
+
+Report saved to: E:\BD SHS\results\evaluation\equal_coverage\complete\matched_coverage_implementation_plan.md

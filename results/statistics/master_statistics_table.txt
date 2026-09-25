@@ -1,0 +1,39 @@
+# Master Statistics Table
+
+           metric  budget baseline_strategy  n_examples  mean_hierarchical  mean_baseline     delta    ci_low   ci_high  p_value  cohens_dz           direction
+comprehensiveness      10               sum        5029           0.303588       0.166451  0.137137  0.127971  0.146191 0.000100   0.416736     baseline_better
+      sufficiency      10               sum        5029           0.183563       0.360690 -0.177127 -0.186313 -0.168162 0.000100  -0.541042 hierarchical_better
+  comp_efficiency      10               sum        5029           1.095699       1.266321 -0.170622 -0.228998 -0.112822 0.000100  -0.080165 hierarchical_better
+  suff_efficiency      10               sum        5029           1.194115       3.493317 -2.299202 -2.412786 -2.188217 0.000100  -0.565339 hierarchical_better
+comprehensiveness      20               sum        5029           0.309354       0.210675  0.098679  0.090088  0.107494 0.000100   0.317674     baseline_better
+      sufficiency      20               sum        5029           0.174453       0.311478 -0.137025 -0.145326 -0.128709 0.000100  -0.461534 hierarchical_better
+  comp_efficiency      20               sum        5029           1.013334       1.120189 -0.106854 -0.145395 -0.067406 0.000100  -0.076872 hierarchical_better
+  suff_efficiency      20               sum        5029           0.806825       1.831594 -1.024769 -1.081651 -0.968803 0.000100  -0.510785 hierarchical_better
+comprehensiveness      30               sum        5029           0.318282       0.252481  0.065800  0.057573  0.074025 0.000100   0.223904     baseline_better
+      sufficiency      30               sum        5029           0.155875       0.243012 -0.087136 -0.094481 -0.079817 0.000100  -0.332793 hierarchical_better
+  comp_efficiency      30               sum        5029           0.920570       0.957945 -0.037375 -0.064783 -0.010303 0.006599  -0.037834 hierarchical_better
+  suff_efficiency      30               sum        5029           0.543162       0.988385 -0.445223 -0.478271 -0.412540 0.000100  -0.377502 hierarchical_better
+comprehensiveness      10              mean        5029           0.303588       0.143241  0.160347  0.150582  0.170276 0.000100   0.453716     baseline_better
+      sufficiency      10              mean        5029           0.183563       0.382909 -0.199346 -0.209118 -0.189744 0.000100  -0.569069 hierarchical_better
+  comp_efficiency      10              mean        5029           1.095699       1.067659  0.028040 -0.030676  0.086830 0.357864   0.013099     baseline_better
+  suff_efficiency      10              mean        5029           1.194115       3.659718 -2.465603 -2.581761 -2.351174 0.000100  -0.588303 hierarchical_better
+comprehensiveness      20              mean        5029           0.309354       0.184186  0.125168  0.115956  0.134542 0.000100   0.374160     baseline_better
+      sufficiency      20              mean        5029           0.174453       0.340730 -0.166277 -0.175294 -0.157275 0.000100  -0.510326 hierarchical_better
+  comp_efficiency      20              mean        5029           1.013334       0.968720  0.044614  0.005166  0.084260 0.028897   0.030950     baseline_better
+  suff_efficiency      20              mean        5029           0.806825       1.998677 -1.191852 -1.252387 -1.132398 0.000100  -0.552200 hierarchical_better
+comprehensiveness      30              mean        5029           0.318282       0.226921  0.091361  0.082767  0.100140 0.000100   0.291631     baseline_better
+      sufficiency      30              mean        5029           0.155875       0.272794 -0.116919 -0.125096 -0.108654 0.000100  -0.396652 hierarchical_better
+  comp_efficiency      30              mean        5029           0.920570       0.858557  0.062013  0.033474  0.090821 0.000100   0.059525     baseline_better
+  suff_efficiency      30              mean        5029           0.543162       1.110694 -0.567532 -0.603827 -0.530592 0.000100  -0.431056 hierarchical_better
+comprehensiveness      10               max        5029           0.303588       0.162100  0.141488  0.132294  0.151007 0.000100   0.419279     baseline_better
+      sufficiency      10               max        5029           0.183563       0.366130 -0.182567 -0.191839 -0.173324 0.000100  -0.545377 hierarchical_better
+  comp_efficiency      10               max        5029           1.095699       1.225545 -0.129847 -0.189485 -0.070190 0.000100  -0.059880 hierarchical_better
+  suff_efficiency      10               max        5029           1.194115       3.535398 -2.341284 -2.455927 -2.228375 0.000100  -0.570340 hierarchical_better
+comprehensiveness      20               max        5029           0.309354       0.206821  0.102533  0.093944  0.111409 0.000100   0.325478     baseline_better
+      sufficiency      20               max        5029           0.174453       0.315597 -0.141143 -0.149513 -0.132666 0.000100  -0.462319 hierarchical_better
+  comp_efficiency      20               max        5029           1.013334       1.101169 -0.087834 -0.126407 -0.049455 0.000200  -0.062538 hierarchical_better
+  suff_efficiency      20               max        5029           0.806825       1.853071 -1.046246 -1.103050 -0.989634 0.000100  -0.512599 hierarchical_better
+comprehensiveness      30               max        5029           0.318282       0.249136  0.069146  0.060918  0.077548 0.000100   0.228889     baseline_better
+      sufficiency      30               max        5029           0.155875       0.247043 -0.091168 -0.098617 -0.083713 0.000100  -0.339683 hierarchical_better
+  comp_efficiency      30               max        5029           0.920570       0.948202 -0.027632 -0.055454  0.000426 0.054395  -0.027048 hierarchical_better
+  suff_efficiency      30               max        5029           0.543162       1.004439 -0.461276 -0.495367 -0.427645 0.000100  -0.381886 hierarchical_better

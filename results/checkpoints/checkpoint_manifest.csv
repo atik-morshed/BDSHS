@@ -1,0 +1,3 @@
+model,seed,checkpoint,epoch,val_f1,verification_status
+BanglaBERT,42,checkpoint-5028,2,0.9036792062835882,PASS
+XLM-R,42,checkpoint-12570,5,0.9146366427840328,PASS

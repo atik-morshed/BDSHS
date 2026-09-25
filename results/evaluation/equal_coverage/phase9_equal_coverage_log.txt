@@ -1,0 +1,58 @@
+================================================================================
+PHASE 9 — EQUAL-COVERAGE EXPERIMENT
+================================================================================
+
+Loading per-example results from: E:\BD SHS\results\evaluation\per_example\per_example_faithfulness_results.csv
+Loaded 60348 rows
+
+Loading word-level attribution data from: E:\BD SHS\outputs\attribution\phase2
+Loaded word-level attribution files:
+  IG BanglaBERT: 65232 rows
+  IG XLM-R: 63856 rows
+  SHAP BanglaBERT: 65232 rows
+  SHAP XLM-R: 63856 rows
+
+Loading test dataset for word counts
+
+================================================================================
+Analyzing actual coverage in nominal-budget results
+================================================================================
+
+Coverage analysis:
+    strategy  budget  avg_comp_coverage  avg_suff_coverage
+         sum      10           0.169170           0.169170
+         sum      20           0.213163           0.213163
+         sum      30           0.279034           0.279034
+        mean      10           0.169170           0.169170
+        mean      20           0.213163           0.213163
+        mean      30           0.279034           0.279034
+         max      10           0.169170           0.169170
+         max      20           0.213163           0.213163
+         max      30           0.279034           0.279034
+hierarchical      10           0.313400           0.313400
+hierarchical      20           0.333410           0.333410
+hierarchical      30           0.369887           0.369887
+
+Coverage analysis saved to: E:\BD SHS\results\evaluation\equal_coverage\nominal_coverage_analysis.csv
+
+================================================================================
+Implementing equal-coverage evaluation
+================================================================================
+
+Target coverages (based on hierarchical):
+  10% budget: 0.3134
+  20% budget: 0.3334
+  30% budget: 0.3699
+
+================================================================================
+Note: Full equal-coverage requires re-running attribution
+================================================================================
+
+For full equal-coverage evaluation, we would need to:
+1. Re-run attribution with adjusted word budgets for flat strategies
+2. For hierarchical: implement deterministic rule to skip merged units exceeding budget
+3. Re-calculate faithfulness metrics with equal actual-word coverage
+
+This would require approximately 4-6 hours of computation.
+
+Report saved to: E:\BD SHS\results\evaluation\equal_coverage\equal_coverage_report.md

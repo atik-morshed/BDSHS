@@ -1,0 +1,37 @@
+================================================================================
+PHASE 13 — QUALITATIVE ANALYSIS
+================================================================================
+
+Loading per-example results from: E:\BD SHS\results\evaluation\per_example\per_example_faithfulness_results.csv
+Loaded 60348 rows
+Unique examples: 5029
+
+================================================================================
+SELECTING EXAMPLES FOR QUALITATIVE ANALYSIS
+================================================================================
+punctuation_heavy: 22 candidates, selected 5
+code_mixed: 2 candidates, selected 2
+compound_insults: selected 5 random examples
+multi_word_insults: selected 5 random examples
+sarcastic: selected 5 random examples
+unk_containing: selected 5 random examples
+
+================================================================================
+GENERATING QUALITATIVE ANALYSIS
+================================================================================
+
+Processing category: punctuation_heavy
+
+Processing category: code_mixed
+
+Processing category: compound_insults
+
+Processing category: multi_word_insults
+
+Processing category: sarcastic
+
+Processing category: unk_containing
+
+Qualitative examples saved to: E:\BD SHS\results\qualitative\qualitative_examples.csv
+
+Report saved to: E:\BD SHS\results\qualitative\qualitative_analysis.md

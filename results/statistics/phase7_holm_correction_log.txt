@@ -1,0 +1,35 @@
+================================================================================
+PHASE 7 — ADD MULTIPLE-COMPARISON CORRECTION (HOLM-BONFERRONI)
+================================================================================
+
+Loading Phase 5 results from: E:\BD SHS\results\statistics\rebuilt_statistical_results.json
+Loaded 36 comparisons
+
+================================================================================
+Extracting p-values for Holm-Bonferroni correction
+================================================================================
+Extracted 36 p-values
+Min p-value: 0.000100
+Max p-value: 0.357864
+
+================================================================================
+Applying Holm-Bonferroni correction
+================================================================================
+Alpha level: 0.05
+Correction method: Holm-Bonferroni (manual implementation)
+Total comparisons: 36
+Significant before correction: 34
+Significant after correction: 33
+
+================================================================================
+Updating results with corrected p-values
+================================================================================
+
+Corrected results saved to: E:\BD SHS\results\statistics\corrected_statistical_results.json
+
+================================================================================
+Generating Holm correction summary table
+================================================================================
+Summary table saved to: E:\BD SHS\results\statistics\holm_correction_summary.csv
+
+Report saved to: E:\BD SHS\results\statistics\holm_correction_report.md

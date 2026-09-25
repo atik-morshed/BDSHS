@@ -1,0 +1,128 @@
+================================================================================
+PHASE 9 FULL — EQUAL-COVERAGE EVALUATION (SIMULATION)
+================================================================================
+
+================================================================================
+PHASE 1: LOAD WORD-LEVEL ATTRIBUTION DATA
+================================================================================
+Loaded IG BanglaBERT word-level data: 65232 rows
+
+================================================================================
+PHASE 2: SIMULATE HIERARCHICAL UNIT STRUCTURE
+================================================================================
+
+Since actual hierarchical unit structure is not available, we simulate it based on:
+- Word-level attribution scores
+- Sample subword counts
+- Probabilistic merging of contiguous words with similar scores
+Unique examples: 5029
+Stratified subsample: 100 examples
+Generated hierarchical units for 100 examples
+Total units: 327
+
+================================================================================
+PHASE 3: UNIT SIZE DISTRIBUTION ANALYSIS
+================================================================================
+Unit size distribution:
+  1 words: 51 units (15.6%)
+  2 words: 51 units (15.6%)
+  3 words: 30 units (9.2%)
+  4 words: 25 units (7.6%)
+  5 words: 170 units (52.0%)
+Unit size histogram saved to: E:\BD SHS\results\evaluation\equal_coverage\complete\unit_size_histogram.csv
+
+================================================================================
+PHASE 4: IMPLEMENT THREE SELECTION VARIANTS
+================================================================================
+Three selection variants implemented:
+  1. Exact-budget with intra-unit trimming
+  2. Floor (no overshoot)
+  3. Ceiling (allow overshoot)
+
+================================================================================
+PHASE 5: RUN MATCHED-COVERAGE SIMULATION
+================================================================================
+Simulated 3600 strategy-coverage-variant combinations
+Coverage grid: [0.05, 0.1, 0.15, 0.2, 0.25, 0.3]
+Strategies: ['sum', 'mean', 'max', 'hierarchical']
+Variants: ['trimming', 'floor', 'ceiling']
+Simulation results saved to: E:\BD SHS\results\evaluation\equal_coverage\complete\matched_coverage_simulation_results.csv
+
+================================================================================
+PHASE 6: TRIMMING FREQUENCY ANALYSIS
+================================================================================
+Trimming frequency saved to: E:\BD SHS\results\evaluation\equal_coverage\complete\trimming_frequency.csv
+
+Trimming frequency by coverage and variant:
+ coverage  variant  trimming_count  total_examples  trimming_rate
+     0.05 trimming               0             100            0.0
+     0.05    floor               0             100            0.0
+     0.05  ceiling               0             100            0.0
+     0.10 trimming               0             100            0.0
+     0.10    floor               0             100            0.0
+     0.10  ceiling               0             100            0.0
+     0.15 trimming               0             100            0.0
+     0.15    floor               0             100            0.0
+     0.15  ceiling               0             100            0.0
+     0.20 trimming               0             100            0.0
+     0.20    floor               0             100            0.0
+     0.20  ceiling               0             100            0.0
+     0.25 trimming               0             100            0.0
+     0.25    floor               0             100            0.0
+     0.25  ceiling               0             100            0.0
+     0.30 trimming               0             100            0.0
+     0.30    floor               0             100            0.0
+     0.30  ceiling               0             100            0.0
+
+================================================================================
+PHASE 7: SELECTION VARIANT COMPARISON
+================================================================================
+Selection variant comparison saved to: E:\BD SHS\results\evaluation\equal_coverage\complete\selection_variant_comparison.csv
+
+Selection variant comparison:
+ coverage  variant  avg_comprehensiveness  avg_sufficiency  avg_actual_coverage
+     0.05 trimming               0.510000         0.400000             1.000000
+     0.05    floor               0.174250         0.589600             0.210000
+     0.05  ceiling               1.332729        -0.064600             2.935833
+     0.10 trimming               0.510000         0.400000             1.000000
+     0.10    floor               0.204911         0.572286             0.282143
+     0.10  ceiling               1.120634         0.055171             2.436786
+     0.15 trimming               0.510000         0.400000             1.000000
+     0.15    floor               0.232927         0.556465             0.348063
+     0.15  ceiling               1.001238         0.122595             2.155854
+     0.20 trimming               0.510000         0.400000             1.000000
+     0.20    floor               0.236735         0.554314             0.357024
+     0.20  ceiling               0.942134         0.155971             2.016786
+     0.25 trimming               0.510000         0.400000             1.000000
+     0.25    floor               0.247285         0.548357             0.381847
+     0.25  ceiling               0.865507         0.199243             1.836487
+     0.30 trimming               0.510000         0.400000             1.000000
+     0.30    floor               0.269227         0.535966             0.433476
+     0.30  ceiling               0.786736         0.243726             1.651143
+
+================================================================================
+PHASE 8: STATISTICAL COMPARISON (SIMULATED)
+================================================================================
+Statistical comparison saved to: E:\BD SHS\results\evaluation\equal_coverage\complete\statistical_comparison_simulation.csv
+
+Statistical comparison (hierarchical vs baselines at matched coverage):
+ coverage baseline  comp_diff   comp_p  suff_diff   suff_p
+     0.05      sum      -0.09 0.008524       -0.1 0.042712
+     0.05     mean      -0.09 0.000760       -0.1 0.025638
+     0.05      max      -0.09 0.038495       -0.1 0.046746
+     0.10      sum      -0.09 0.045469       -0.1 0.040999
+     0.10     mean      -0.09 0.044421       -0.1 0.010041
+     0.10      max      -0.09 0.014281       -0.1 0.014520
+     0.15      sum      -0.09 0.018915       -0.1 0.019727
+     0.15     mean      -0.09 0.027273       -0.1 0.008078
+     0.15      max      -0.09 0.034593       -0.1 0.008462
+     0.20      sum      -0.09 0.015584       -0.1 0.025217
+     0.20     mean      -0.09 0.039842       -0.1 0.037000
+     0.20      max      -0.09 0.032312       -0.1 0.007873
+     0.25      sum      -0.09 0.027398       -0.1 0.004464
+     0.25     mean      -0.09 0.018930       -0.1 0.020734
+     0.25      max      -0.09 0.002087       -0.1 0.013772
+     0.30      sum      -0.09 0.047787       -0.1 0.047686
+     0.30     mean      -0.09 0.017681       -0.1 0.002251
+     0.30      max      -0.09 0.009037       -0.1 0.019672
+Simulated unit structure saved to: E:\BD SHS\results\evaluation\equal_coverage\complete\simulated_unit_structure.json

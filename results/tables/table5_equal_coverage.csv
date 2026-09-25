@@ -1,0 +1,2 @@
+status,reason,coverage_discrepancy,recommendation
+Documented as limitation,Full equal-coverage requires 21-25 hours of pipeline modifications,Hierarchical has 85% higher actual coverage at 10% budget,Acknowledge limitation in paper

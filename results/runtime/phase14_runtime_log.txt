@@ -1,0 +1,35 @@
+================================================================================
+PHASE 14 — RUNTIME EXPERIMENT
+================================================================================
+
+Attempting to load attribution log from: E:\BD SHS\outputs\attribution\phase2\phase2_attribution_log.txt
+Log file size: 29241 characters
+
+================================================================================
+RUNTIME DATA EXTRACTION
+================================================================================
+
+Note: The attribution log does not contain detailed timing information.
+For accurate runtime measurements, the attribution script would need to:
+1. Log start and end times for each example
+2. Log GPU memory usage
+3. Log aggregation strategy times separately
+
+================================================================================
+ESTIMATING RUNTIME FROM FILE TIMESTAMPS
+================================================================================
+
+Found 4 attribution files
+
+File information:
+                      file   size_mb        mtime
+  ig_banglabert_token.json 21.079782 1.790281e+09
+       ig_xlm_r_token.json 24.244321 1.790288e+09
+shap_banglabert_token.json 20.609726 1.790287e+09
+     shap_xlm_r_token.json 23.827399 1.790296e+09
+
+Runtime estimation:
+Note: Without detailed timing logs, we can only provide rough estimates.
+Actual runtime measurement requires instrumenting the attribution scripts.
+
+Report saved to: E:\BD SHS\results\runtime\runtime_analysis.md

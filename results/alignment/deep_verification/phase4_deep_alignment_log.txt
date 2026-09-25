@@ -1,0 +1,114 @@
+================================================================================
+PHASE 4 — DEEP ATTRIBUTION ALIGNMENT VERIFICATION
+================================================================================
+
+================================================================================
+Verifying: BanglaBERT_IG
+File: E:\BD SHS\outputs\attribution\phase2\ig_banglabert_token.json
+================================================================================
+
+--- A. Example ID Verification ---
+Total examples: 5029
+Unique example IDs: 5029
+Duplicate IDs: 0
+✓ No duplicate example IDs
+
+--- B. Test Set ID Range Verification ---
+Expected ID range: 0 to 5028
+Missing IDs: 0
+Extra IDs: 0
+✓ All expected example IDs present
+✓ No extra example IDs
+
+--- C. Word Reconstruction Verification ---
+Word reconstruction issues: 0
+Alignment rate: 100.00%
+
+--- D. Numeric Value Verification ---
+NaN/invalid score values: 0
+Infinite values: 0
+
+================================================================================
+Verifying: BanglaBERT_SHAP
+File: E:\BD SHS\outputs\attribution\phase2\shap_banglabert_token.json
+================================================================================
+
+--- A. Example ID Verification ---
+Total examples: 5029
+Unique example IDs: 5029
+Duplicate IDs: 0
+✓ No duplicate example IDs
+
+--- B. Test Set ID Range Verification ---
+Expected ID range: 0 to 5028
+Missing IDs: 0
+Extra IDs: 0
+✓ All expected example IDs present
+✓ No extra example IDs
+
+--- C. Word Reconstruction Verification ---
+Word reconstruction issues: 32
+Alignment rate: 99.36%
+
+--- D. Numeric Value Verification ---
+NaN/invalid score values: 0
+Infinite values: 0
+
+================================================================================
+Verifying: XLM-R_IG
+File: E:\BD SHS\outputs\attribution\phase2\ig_xlm_r_token.json
+================================================================================
+
+--- A. Example ID Verification ---
+Total examples: 5029
+Unique example IDs: 5029
+Duplicate IDs: 0
+✓ No duplicate example IDs
+
+--- B. Test Set ID Range Verification ---
+Expected ID range: 0 to 5028
+Missing IDs: 0
+Extra IDs: 0
+✓ All expected example IDs present
+✓ No extra example IDs
+
+--- C. Word Reconstruction Verification ---
+Word reconstruction issues: 3
+Alignment rate: 99.94%
+
+--- D. Numeric Value Verification ---
+NaN/invalid score values: 0
+Infinite values: 0
+
+================================================================================
+Verifying: XLM-R_SHAP
+File: E:\BD SHS\outputs\attribution\phase2\shap_xlm_r_token.json
+================================================================================
+
+--- A. Example ID Verification ---
+Total examples: 5029
+Unique example IDs: 5029
+Duplicate IDs: 0
+✓ No duplicate example IDs
+
+--- B. Test Set ID Range Verification ---
+Expected ID range: 0 to 5028
+Missing IDs: 0
+Extra IDs: 0
+✓ All expected example IDs present
+✓ No extra example IDs
+
+--- C. Word Reconstruction Verification ---
+Word reconstruction issues: 71
+Alignment rate: 98.59%
+
+--- D. Numeric Value Verification ---
+NaN/invalid score values: 0
+Infinite values: 0
+
+Alignment failures saved to: E:\BD SHS\results\alignment\deep_verification\alignment_failures.csv
+Total failures: 106
+
+Verification results saved to: E:\BD SHS\results\alignment\deep_verification\deep_alignment_verification.json
+
+Report saved to: E:\BD SHS\results\alignment\deep_verification\deep_alignment_verification.md

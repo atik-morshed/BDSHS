@@ -1,0 +1,63 @@
+================================================================================
+PHASE 6 — VERIFY PERMUTATION TEST IMPLEMENTATION
+================================================================================
+
+Loading per-example results from: E:\BD SHS\results\evaluation\per_example\per_example_faithfulness_results.csv
+Loaded 60348 rows
+
+Loading Phase 5 results from: E:\BD SHS\results\statistics\rebuilt_statistical_results.json
+Loaded 36 comparisons from Phase 5
+
+================================================================================
+Sample comparison for verification:
+  Comparison: hierarchical_vs_sum
+  Metric: comprehensiveness
+================================================================================
+
+Hierarchical rows: 5029
+Baseline rows: 5029
+Merged rows: 5029
+
+Difference statistics:
+  Mean: 0.137137
+  Std: 0.329073
+  Min: -0.979011
+  Max: 0.991268
+
+Phase 5 mean difference: 0.137137
+Manual mean difference: 0.137137
+Match: True
+
+================================================================================
+Running manual permutation test verification
+================================================================================
+
+Permutation test results:
+  Observed statistic: 0.137137
+  Extreme count: 0
+  P-value (uncorrected): 0.000000
+  P-value (+1 correction): 0.000100
+
+Phase 5 p-value: 0.000100
+Manual p-value (corrected): 0.000100
+Match (within Monte Carlo variance): True
+
+================================================================================
+Verifying +1 correction implementation
+================================================================================
+Phase 5 reports p < 0.0001
+Uncorrected p would be: 0.000000
+Corrected p is: 0.000100
+Correction applied: True
+
+================================================================================
+Verifying consistency across multiple comparisons
+================================================================================
+Found 12 comparisons with budget 10
+
+Consistency check:
+  Checked: 12 comparisons
+  Consistent: 12
+  Inconsistent: 0
+
+Report saved to: E:\BD SHS\results\statistics\permutation_verification_report.md

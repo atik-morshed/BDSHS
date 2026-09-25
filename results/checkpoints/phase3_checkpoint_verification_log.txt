@@ -1,0 +1,45 @@
+================================================================================
+PHASE 3 — VERIFY CHECKPOINTS PROGRAMMATICALLY
+================================================================================
+
+================================================================================
+Verifying: BanglaBERT
+================================================================================
+
+Loading trainer_state.json from: E:\BD SHS\outputs\banglabert-bdshs\checkpoint-5028\trainer_state.json
+
+Found 2 validation F1 entries
+
+Programmatic selection (max validation F1):
+  Best epoch: 2.0
+  Best validation F1: 0.903679
+
+Verification:
+  Expected epoch: 2
+  Used checkpoint: checkpoint-5028
+  Best epoch (programmatic): 2.0
+  ✓ PASS: Programmatic selection matches expected epoch
+  ⚠ WARNING: Checkpoint name does not contain best epoch
+
+================================================================================
+Verifying: XLM-R
+================================================================================
+
+Loading trainer_state.json from: E:\BD SHS\outputs\xlmr-bdshs\checkpoint-12570\trainer_state.json
+
+Found 5 validation F1 entries
+
+Programmatic selection (max validation F1):
+  Best epoch: 5.0
+  Best validation F1: 0.914637
+
+Verification:
+  Expected epoch: 5
+  Used checkpoint: checkpoint-12570
+  Best epoch (programmatic): 5.0
+  ✓ PASS: Programmatic selection matches expected epoch
+  ⚠ WARNING: Checkpoint name does not contain best epoch
+
+Checkpoint manifest saved to: E:\BD SHS\results\checkpoints\checkpoint_manifest.csv
+
+Verification results saved to: E:\BD SHS\results\checkpoints\checkpoint_verification_results.json

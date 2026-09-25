@@ -1,0 +1,59 @@
+================================================================================
+PHASE 9 FULL — EQUAL-COVERAGE EVALUATION (SIMPLIFIED)
+================================================================================
+
+Loading per-example results from: E:\BD SHS\results\evaluation\per_example\per_example_faithfulness_results.csv
+Loaded 60348 rows
+
+================================================================================
+CALCULATING HIERARCHICAL COVERAGE
+================================================================================
+Hierarchical average coverage:
+  10% budget: 0.3134
+  20% budget: 0.3334
+  30% budget: 0.3699
+
+================================================================================
+CALCULATING FLAT STRATEGY COVERAGE
+================================================================================
+sum    @ 10%: 0.1692
+sum    @ 20%: 0.2132
+sum    @ 30%: 0.2790
+mean   @ 10%: 0.1692
+mean   @ 20%: 0.2132
+mean   @ 30%: 0.2790
+max    @ 10%: 0.1692
+max    @ 20%: 0.2132
+max    @ 30%: 0.2790
+
+================================================================================
+CALCULATING EQUAL-COVERAGE BUDGETS (INTERPOLATION)
+================================================================================
+sum    equal-coverage budgets:
+  Target 10% coverage: 30.00% budget
+  Target 20% coverage: 30.00% budget
+  Target 30% coverage: 30.00% budget
+mean   equal-coverage budgets:
+  Target 10% coverage: 30.00% budget
+  Target 20% coverage: 30.00% budget
+  Target 30% coverage: 30.00% budget
+max    equal-coverage budgets:
+  Target 10% coverage: 30.00% budget
+  Target 20% coverage: 30.00% budget
+  Target 30% coverage: 30.00% budget
+
+================================================================================
+LIMITATION: CANNOT RE-RUN EVALUATION WITH NEW BUDGETS
+================================================================================
+
+The calculated equal-coverage budgets show:
+- Flat strategies would need higher budgets to match hierarchical coverage
+- For example, to match hierarchical 10% coverage (0.3134):
+  sum   : needs 30.00% budget
+  mean  : needs 30.00% budget
+  max   : needs 30.00% budget
+
+This indicates that hierarchical achieves higher coverage at the same nominal budget.
+
+Report saved to: E:\BD SHS\results\evaluation\equal_coverage\equal_coverage_simplified_report.md
+Budget estimates saved to: E:\BD SHS\results\evaluation\equal_coverage\equal_coverage_budget_estimates.csv

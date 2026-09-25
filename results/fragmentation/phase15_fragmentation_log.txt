@@ -1,0 +1,32 @@
+================================================================================
+PHASE 15 — FRAGMENTATION ANALYSIS
+================================================================================
+
+Loading word-level attribution data from: E:\BD SHS\outputs\attribution\phase2
+Loaded word-level attribution files:
+  IG BanglaBERT: 65232 rows
+  IG XLM-R: 63856 rows
+
+================================================================================
+CALCULATING FRAGMENTATION STATISTICS
+================================================================================
+
+BanglaBERT Fragmentation:
+  Unique words: 14122
+  Total subwords: 65232
+  Subwords/word: 1.0768
+  UNK tokens: 0
+  UNK rate: 0.0000
+  Examples with UNK: 0
+
+XLM-R Fragmentation:
+  Unique words: 13890
+  Total subwords: 63856
+  Subwords/word: 1.0000
+  UNK tokens: 0
+  UNK rate: 0.0000
+  Examples with UNK: 0
+
+Fragmentation statistics saved to: E:\BD SHS\results\fragmentation\fragmentation_statistics.csv
+
+Report saved to: E:\BD SHS\results\fragmentation\fragmentation_analysis.md

@@ -1,0 +1,38 @@
+================================================================================
+PHASE 9 FULL — EQUAL-COVERAGE EVALUATION (PRAGMATIC)
+================================================================================
+Device: cuda
+
+================================================================================
+PHASE 1: LOAD EXISTING WORD-LEVEL ATTRIBUTION DATA
+================================================================================
+Loaded IG BanglaBERT word-level data: 65232 rows
+
+================================================================================
+PHASE 2: CREATE STRATIFIED SUBSAMPLE
+================================================================================
+Stratified subsample: 500 examples
+
+================================================================================
+PHASE 3: SIMULATE HIERARCHICAL UNIT STRUCTURE
+================================================================================
+Generated hierarchical units for 500 examples
+Total units: 1965
+Unit structure saved to: E:\BD SHS\results\evaluation\equal_coverage\pragmatic\pragmatic_unit_structure.json
+
+================================================================================
+PHASE 4: IMPLEMENT THREE SELECTION VARIANTS
+================================================================================
+Three selection variants implemented
+
+================================================================================
+PHASE 5: RUN MATCHED-COVERAGE EVALUATION
+================================================================================
+Loading model from: E:\BD SHS\outputs\banglabert-bdshs\checkpoint-5028
+Model loaded successfully
+Coverage grid: [0.1, 0.2, 0.3]
+Strategies: ['sum', 'mean', 'max', 'hierarchical']
+Variants: ['trimming', 'floor', 'ceiling']
+Text mapping created for 500 examples
+Total evaluations completed: 6000
+Pragmatic faithfulness results saved to: E:\BD SHS\results\evaluation\equal_coverage\pragmatic\pragmatic_faithfulness_results.csv

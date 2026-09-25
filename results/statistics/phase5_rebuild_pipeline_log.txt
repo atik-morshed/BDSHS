@@ -1,0 +1,317 @@
+================================================================================
+PHASE 5 — REBUILD STATISTICAL PIPELINE WITH CORRECTED EFFECT SIZES
+================================================================================
+
+Configuration:
+  Bootstrap resamples: 10000
+  Bootstrap confidence level: 0.95
+  Permutation tests: 10000
+  Random state: 42
+
+Loading verified per-example results from: E:\BD SHS\results\evaluation\per_example\per_example_faithfulness_results.csv
+Loaded 60348 rows
+
+================================================================================
+REBUILDING STATISTICAL ANALYSIS WITH CORRECTED EFFECT SIZES
+================================================================================
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 10%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_sum - comprehensiveness
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 10%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_sum - sufficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 10%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_sum - comp_efficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 10%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_sum - suff_efficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 20%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_sum - comprehensiveness
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 20%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_sum - sufficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 20%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_sum - comp_efficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 20%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_sum - suff_efficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 30%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_sum - comprehensiveness
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 30%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_sum - sufficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 30%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_sum - comp_efficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 30%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_sum - suff_efficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 10%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_mean - comprehensiveness
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 10%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_mean - sufficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 10%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_mean - comp_efficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 10%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_mean - suff_efficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 20%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_mean - comprehensiveness
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 20%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_mean - sufficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 20%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_mean - comp_efficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 20%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_mean - suff_efficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 30%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_mean - comprehensiveness
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 30%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_mean - sufficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 30%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_mean - comp_efficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 30%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_mean - suff_efficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 10%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_max - comprehensiveness
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 10%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_max - sufficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 10%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_max - comp_efficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 10%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_max - suff_efficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 20%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_max - comprehensiveness
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 20%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_max - sufficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 20%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_max - comp_efficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 20%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_max - suff_efficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 30%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_max - comprehensiveness
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 30%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_max - sufficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 30%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_max - comp_efficiency
+  Valid examples: 5029
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 30%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+
+Analyzing: hierarchical_vs_max - suff_efficiency
+  Valid examples: 5029
+
+================================================================================
+Rebuilt statistical results saved to: E:\BD SHS\results\statistics\rebuilt_statistical_results.json
+Total comparisons: 36
+================================================================================
+
+================================================================================
+GENERATING MASTER STATISTICS TABLE
+================================================================================
+Master statistics table saved to: E:\BD SHS\results\statistics\master_statistics_table.csv
+Master statistics text saved to: E:\BD SHS\results\statistics\master_statistics_table.txt
+
+Configuration saved to: E:\BD SHS\results\statistics\rebuild_pipeline_config.json

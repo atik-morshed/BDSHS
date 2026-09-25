@@ -1,0 +1,3 @@
+model,subwords_per_word,unk_token_rate,examples_with_unk,total_examples
+BanglaBERT,1.0767568064753494,0.0,0,5029
+XLM-R,1.0,0.0,0,5029

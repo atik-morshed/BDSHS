@@ -1,0 +1,88 @@
+================================================================================
+PHASE 2 — ROW COUNT DISCREPANCY INVESTIGATION
+================================================================================
+
+Expected total rows: 60348 (5,029 × 4 strategies × 3 budgets)
+
+Loading CSV from: E:\BD SHS\results\evaluation\per_example\per_example_faithfulness_results.csv
+DataFrame shape: (60348, 11)
+Data rows (pandas): 60348
+
+Checking physical line count in file...
+Physical lines in file: 60349
+✓ Extra row is the CSV header (expected)
+
+================================================================================
+STRATEGY COUNT VERIFICATION
+================================================================================
+
+Strategy counts:
+  ✓ hierarchical:  15087 (expected: 15087)
+  ✓ max         :  15087 (expected: 15087)
+  ✓ mean        :  15087 (expected: 15087)
+  ✓ sum         :  15087 (expected: 15087)
+
+================================================================================
+BUDGET COUNT VERIFICATION
+================================================================================
+
+Budget counts:
+  ✓ Budget  10%:  20116 (expected: 20116)
+  ✓ Budget  20%:  20116 (expected: 20116)
+  ✓ Budget  30%:  20116 (expected: 20116)
+
+================================================================================
+STRATEGY-BUDGET COMBINATION VERIFICATION
+================================================================================
+
+Each strategy-budget combination should have exactly 5,029 examples:
+Total combinations: 12
+  ✓ hierarchical @  10%:   5029 (expected: 5029)
+  ✓ hierarchical @  20%:   5029 (expected: 5029)
+  ✓ hierarchical @  30%:   5029 (expected: 5029)
+  ✓ max          @  10%:   5029 (expected: 5029)
+  ✓ max          @  20%:   5029 (expected: 5029)
+  ✓ max          @  30%:   5029 (expected: 5029)
+  ✓ mean         @  10%:   5029 (expected: 5029)
+  ✓ mean         @  20%:   5029 (expected: 5029)
+  ✓ mean         @  30%:   5029 (expected: 5029)
+  ✓ sum          @  10%:   5029 (expected: 5029)
+  ✓ sum          @  20%:   5029 (expected: 5029)
+  ✓ sum          @  30%:   5029 (expected: 5029)
+
+================================================================================
+DUPLICATE EXAMPLE ID CHECK
+================================================================================
+
+Total example_id entries: 60348
+Unique example_ids: 5029
+Duplicates: 55319
+⚠ WARNING: Duplicate example_ids detected!
+This is EXPECTED because each example appears under multiple conditions
+Expected: Each of 5029 examples appears 12 times (4 strategies × 3 budgets)
+Expected total: 60348
+✓ Duplicate count matches expected structure
+
+================================================================================
+MISSING EXAMPLE ID CHECK
+================================================================================
+
+Expected ID range: 0 to 5028
+Missing IDs: 0
+Extra IDs: 0
+✓ All example IDs in expected range
+
+================================================================================
+SUMMARY
+================================================================================
+
+Mathematical expectation: 60348 rows
+Pandas DataFrame rows: 60348
+Physical file lines: 60349
+
+✓ DISCREPANCY RESOLVED: Extra row is CSV header
+  Data rows: 60348
+  Header: 1
+  Total: 60349
+
+⚠ SOME VERIFICATIONS FAILED

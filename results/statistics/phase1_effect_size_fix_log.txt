@@ -1,0 +1,451 @@
+================================================================================
+PHASE 1 — FIX EFFECT SIZE CALCULATION (CRITICAL BUG FIX)
+================================================================================
+
+Loading per-example results from: E:\BD SHS\results\evaluation\per_example\per_example_faithfulness_results.csv
+Loaded 60348 rows
+
+================================================================================
+INVESTIGATING EFFECT SIZE CALCULATION
+================================================================================
+
+--------------------------------------------------------------------------------
+DETAILED INVESTIGATION: Hierarchical vs Sum @ 10% Sufficiency Efficiency
+--------------------------------------------------------------------------------
+
+Hierarchical examples: 5029
+Baseline examples: 5029
+Common example IDs: 5029
+Hierarchical-only IDs: 0
+Baseline-only IDs: 0
+
+Aligned Hierarchical values: 5029
+Aligned Baseline values: 5029
+
+Difference statistics:
+  Mean: -2.299202
+  Std (ddof=1): 4.066943
+  Std (ddof=0): 4.066539
+  Min: -18.641502
+  Max: 7.368767
+  Median: -0.007386
+
+Cohen's d_z calculation:
+  mean_diff = -2.299202
+  sd_diff = 4.066943
+  Cohen's d_z = -0.565339
+
+Sanity checks:
+  np.isfinite(dz): True
+  sd_diff > 0: True
+  abs(dz) < 1e-8: False
+  abs(mean_diff) > 1e-3: True
+
+================================================================================
+APPLYING CORRECTED CALCULATION TO ALL COMPARISONS
+================================================================================
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 10%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: 0.416736
+  Mean difference: 0.137137
+  Std difference: 0.329073
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 10%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.541042
+  Mean difference: -0.177127
+  Std difference: 0.327382
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 10%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.080165
+  Mean difference: -0.170622
+  Std difference: 2.128379
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 10%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.565339
+  Mean difference: -2.299202
+  Std difference: 4.066943
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 20%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: 0.317674
+  Mean difference: 0.098679
+  Std difference: 0.310628
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 20%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.461534
+  Mean difference: -0.137025
+  Std difference: 0.296891
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 20%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.076872
+  Mean difference: -0.106854
+  Std difference: 1.390022
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 20%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.510785
+  Mean difference: -1.024769
+  Std difference: 2.006263
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 30%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: 0.223904
+  Mean difference: 0.065800
+  Std difference: 0.293878
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 30%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.332793
+  Mean difference: -0.087136
+  Std difference: 0.261834
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 30%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.037834
+  Mean difference: -0.037375
+  Std difference: 0.987875
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs sum
+Budget: 30%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.377502
+  Mean difference: -0.445223
+  Std difference: 1.179393
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 10%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: 0.453716
+  Mean difference: 0.160347
+  Std difference: 0.353409
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 10%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.569069
+  Mean difference: -0.199346
+  Std difference: 0.350301
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 10%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: 0.013099
+  Mean difference: 0.028040
+  Std difference: 2.140667
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 10%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.588303
+  Mean difference: -2.465603
+  Std difference: 4.191040
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 20%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: 0.374160
+  Mean difference: 0.125168
+  Std difference: 0.334531
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 20%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.510326
+  Mean difference: -0.166277
+  Std difference: 0.325825
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 20%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: 0.030950
+  Mean difference: 0.044614
+  Std difference: 1.441521
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 20%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.552200
+  Mean difference: -1.191852
+  Std difference: 2.158371
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 30%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: 0.291631
+  Mean difference: 0.091361
+  Std difference: 0.313276
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 30%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.396652
+  Mean difference: -0.116919
+  Std difference: 0.294764
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 30%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: 0.059525
+  Mean difference: 0.062013
+  Std difference: 1.041795
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs mean
+Budget: 30%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.431056
+  Mean difference: -0.567532
+  Std difference: 1.316609
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 10%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: 0.419279
+  Mean difference: 0.141488
+  Std difference: 0.337456
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 10%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.545377
+  Mean difference: -0.182567
+  Std difference: 0.334754
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 10%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.059880
+  Mean difference: -0.129847
+  Std difference: 2.168463
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 10%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.570340
+  Mean difference: -2.341284
+  Std difference: 4.105065
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 20%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: 0.325478
+  Mean difference: 0.102533
+  Std difference: 0.315022
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 20%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.462319
+  Mean difference: -0.141143
+  Std difference: 0.305294
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 20%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.062538
+  Mean difference: -0.087834
+  Std difference: 1.404491
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 20%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.512599
+  Mean difference: -1.046246
+  Std difference: 2.041060
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 30%, Metric: comprehensiveness
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: 0.228889
+  Mean difference: 0.069146
+  Std difference: 0.302093
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 30%, Metric: sufficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.339683
+  Mean difference: -0.091168
+  Std difference: 0.268391
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 30%, Metric: comp_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.027048
+  Mean difference: -0.027632
+  Std difference: 1.021601
+
+────────────────────────────────────────────────────────────────────────────────
+Comparing: Hierarchical vs max
+Budget: 30%, Metric: suff_efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Valid examples: 5029
+  Cohen's d_z: -0.381886
+  Mean difference: -0.461276
+  Std difference: 1.207891
+
+================================================================================
+Corrected effect sizes saved to: E:\BD SHS\results\statistics\corrected_effect_sizes.json
+Total comparisons: 36
+================================================================================
+
+================================================================================
+SUMMARY OF CORRECTED EFFECT SIZES
+================================================================================
+
+COMPREHENSIVENESS:
+--------------------------------------------------------------------------------
+
+Budget 10%:
+  vs sum   : dz =   0.4167, mean_diff =   0.1371
+  vs mean  : dz =   0.4537, mean_diff =   0.1603
+  vs max   : dz =   0.4193, mean_diff =   0.1415
+
+Budget 20%:
+  vs sum   : dz =   0.3177, mean_diff =   0.0987
+  vs mean  : dz =   0.3742, mean_diff =   0.1252
+  vs max   : dz =   0.3255, mean_diff =   0.1025
+
+Budget 30%:
+  vs sum   : dz =   0.2239, mean_diff =   0.0658
+  vs mean  : dz =   0.2916, mean_diff =   0.0914
+  vs max   : dz =   0.2289, mean_diff =   0.0691
+
+SUFFICIENCY:
+--------------------------------------------------------------------------------
+
+Budget 10%:
+  vs sum   : dz =  -0.5410, mean_diff =  -0.1771
+  vs mean  : dz =  -0.5691, mean_diff =  -0.1993
+  vs max   : dz =  -0.5454, mean_diff =  -0.1826
+
+Budget 20%:
+  vs sum   : dz =  -0.4615, mean_diff =  -0.1370
+  vs mean  : dz =  -0.5103, mean_diff =  -0.1663
+  vs max   : dz =  -0.4623, mean_diff =  -0.1411
+
+Budget 30%:
+  vs sum   : dz =  -0.3328, mean_diff =  -0.0871
+  vs mean  : dz =  -0.3967, mean_diff =  -0.1169
+  vs max   : dz =  -0.3397, mean_diff =  -0.0912
+
+COMP_EFFICIENCY:
+--------------------------------------------------------------------------------
+
+Budget 10%:
+  vs sum   : dz =  -0.0802, mean_diff =  -0.1706
+  vs mean  : dz =   0.0131, mean_diff =   0.0280
+  vs max   : dz =  -0.0599, mean_diff =  -0.1298
+
+Budget 20%:
+  vs sum   : dz =  -0.0769, mean_diff =  -0.1069
+  vs mean  : dz =   0.0309, mean_diff =   0.0446
+  vs max   : dz =  -0.0625, mean_diff =  -0.0878
+
+Budget 30%:
+  vs sum   : dz =  -0.0378, mean_diff =  -0.0374
+  vs mean  : dz =   0.0595, mean_diff =   0.0620
+  vs max   : dz =  -0.0270, mean_diff =  -0.0276
+
+SUFF_EFFICIENCY:
+--------------------------------------------------------------------------------
+
+Budget 10%:
+  vs sum   : dz =  -0.5653, mean_diff =  -2.2992
+  vs mean  : dz =  -0.5883, mean_diff =  -2.4656
+  vs max   : dz =  -0.5703, mean_diff =  -2.3413
+
+Budget 20%:
+  vs sum   : dz =  -0.5108, mean_diff =  -1.0248
+  vs mean  : dz =  -0.5522, mean_diff =  -1.1919
+  vs max   : dz =  -0.5126, mean_diff =  -1.0462
+
+Budget 30%:
+  vs sum   : dz =  -0.3775, mean_diff =  -0.4452
+  vs mean  : dz =  -0.4311, mean_diff =  -0.5675
+  vs max   : dz =  -0.3819, mean_diff =  -0.4613

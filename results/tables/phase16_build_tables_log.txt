@@ -1,0 +1,61 @@
+================================================================================
+PHASE 16 — BUILD FINAL RESULT TABLES
+================================================================================
+
+Loading statistical results from: E:\BD SHS\results\statistics\final_master_table.csv
+Loaded 36 rows
+
+Loading fragmentation statistics from: E:\BD SHS\results\fragmentation\fragmentation_statistics.csv
+Loaded 2 rows
+
+================================================================================
+GENERATING TABLE 1: MODEL PERFORMANCE
+================================================================================
+Loaded checkpoint manifest: 2 models
+
+Loading per-example results to calculate test metrics from: E:\BD SHS\results\evaluation\per_example\per_example_faithfulness_results.csv
+Loaded 60348 rows
+
+Loading test dataset from: E:\BD SHS\test.csv
+Loaded 5029 test examples
+Test dataset columns: ['sentence', 'target', 'type', 'hate speech']
+
+Note: Cannot calculate test metrics without matching example IDs between predictions and ground truth.
+Test metrics require ground truth labels in the per-example results or a matching strategy.
+
+Prediction distribution (total examples: 5029.0):
+predicted_label
+0    30528
+1    29820
+Table 1 saved to: E:\BD SHS\results\tables\table1_model_performance.csv
+
+================================================================================
+GENERATING TABLE 2: TOKENIZATION
+================================================================================
+Table 2 saved to: E:\BD SHS\results\tables\table2_tokenization.csv
+
+================================================================================
+GENERATING TABLE 3: MAIN FAITHFULNESS RESULTS
+================================================================================
+
+Note: Per-example CSV does not include model column.
+Faithfulness evaluation may have been run on one model's attribution.
+Model-specific results would require separate evaluation for each model.
+Table 3 saved to: E:\BD SHS\results\tables\table3_faithfulness.csv
+
+================================================================================
+GENERATING TABLE 4: STATISTICAL COMPARISON
+================================================================================
+Table 4 saved to: E:\BD SHS\results\tables\table4_statistical_comparison.csv
+
+================================================================================
+GENERATING TABLE 5: EQUAL-COVERAGE ROBUSTNESS
+================================================================================
+Table 5 saved to: E:\BD SHS\results\tables\table5_equal_coverage.csv
+
+================================================================================
+GENERATING TABLE 6: MULTI-SEED ROBUSTNESS
+================================================================================
+Table 6 saved to: E:\BD SHS\results\tables\table6_multi_seed.csv
+
+Report saved to: E:\BD SHS\results\tables\final_tables_report.md
